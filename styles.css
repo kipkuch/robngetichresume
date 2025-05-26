@@ -112,6 +112,83 @@ h2::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-container {
+    max-height: 15em;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.skills-container.expanded {
+    max-height: 1000px;
+}
+
+.skills-expand-button {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+}
+
+.skills-expand-button:hover {
+    color: #2980b9;
+}
+
+.skills-expand-button::after {
+    content: "▼";
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.skills-expand-button.expanded::after {
+    transform: rotate(180deg);
+}
+
+.skill-list {
+    position: relative;
+}
+
+.hidden-skills {
+    display: none;
+}
+
+.expand-button {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    transition: color 0.3s;
+}
+
+.expand-button:hover {
+    color: #2980b9;
+}
+
+.expanded .hidden-skills {
+    display: block;
+}
+
+.expanded .expand-button {
+    color: #2980b9;
+}
+
+.expanded .expand-button::after {
+    content: "▲";
+    margin-left: 0.5rem;
+}
+
+.expand-button::after {
+    content: "▼";
+    margin-left: 0.5rem;
 }
 
 .skill-category {

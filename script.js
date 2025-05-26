@@ -50,6 +50,31 @@ function obfuscateEmail() {
 }
 
 // Add styles for email obfuscation
+function calculateYearsOfExperience() {
+    const startYear = 2006;
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - startYear;
+    
+    const yearsElement = document.getElementById('years-of-experience');
+    if (yearsElement) {
+        yearsElement.textContent = years;
+    }
+}
+
+function toggleSkills(category) {
+    const button = document.querySelector(`.expand-button[data-category="${category}"]`);
+    const skillList = button.parentElement.querySelector('.skill-list');
+    
+    if (skillList.classList.contains('expanded')) {
+        skillList.classList.remove('expanded');
+        button.textContent = 'Show more';
+    } else {
+        skillList.classList.add('expanded');
+        button.textContent = 'Show less';
+    }
+}
+
+// Add event listeners for expand buttons
 document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `
@@ -83,4 +108,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize email obfuscation
     obfuscateEmail();
+    
+    // Calculate and display years of experience
+    calculateYearsOfExperience();
+    
+    // Add click event listener for skills expand button
+    const skillsExpandButton = document.querySelector('.skills-expand-button');
+    const skillsContainer = document.querySelector('.skills-container');
+    
+    if (skillsExpandButton && skillsContainer) {
+        skillsExpandButton.addEventListener('click', () => {
+            const expanded = skillsExpandButton.dataset.expanded === 'true';
+            
+            if (expanded) {
+                skillsContainer.classList.remove('expanded');
+                skillsExpandButton.textContent = 'Show all';
+                skillsExpandButton.dataset.expanded = 'false';
+            } else {
+                skillsContainer.classList.add('expanded');
+                skillsExpandButton.textContent = 'Show less';
+                skillsExpandButton.dataset.expanded = 'true';
+            }
+        });
+    }
 });
