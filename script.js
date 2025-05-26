@@ -30,16 +30,11 @@ function obfuscateEmail() {
     const emailElement = document.querySelector('.contact-info p:nth-child(1)');
     if (emailElement) {
         const email = 'robert.ngetich@gmail.com';
-        const obfuscatedEmail = email
-            .split('')
-            .map(char => char.charCodeAt(0).toString(16))
-            .join(' ');
         
         emailElement.innerHTML = `
             <i class="fas fa-envelope"></i>
             <span class="obfuscated-email">
-                <span class="email-display">robert.ngetich[@]gmail[.]com</span>
-                <span class="email-obfuscate">${obfuscatedEmail}</span>
+                <span class="email-display">robert.ngetich[at]gmail[dot]com</span>
             </span>
         `;
 
@@ -48,8 +43,8 @@ function obfuscateEmail() {
             navigator.clipboard.writeText(email);
             emailElement.querySelector('.email-display').textContent = 'Copied!';
             setTimeout(() => {
-                emailElement.querySelector('.email-display').textContent = 'robert.ngetich';
-            }, 2000);
+                emailElement.querySelector('.email-display').textContent = 'robert.ngetich[at]gmail[dot]com';
+            }, 1000);
         });
     }
 }
@@ -58,15 +53,30 @@ function obfuscateEmail() {
 document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `
-        .obfuscated-email .email-obfuscate {
-            display: none;
+        .obfuscated-email {
+            position: relative;
+            cursor: pointer;
         }
-        .obfuscated-email:hover .email-obfuscate {
-            display: inline;
-            color: #3498db;
+        
+        .obfuscated-email::after {
+            content: "Click to copy email address";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
         }
-        .obfuscated-email:hover .email-display {
-            display: none;
+        
+        .obfuscated-email:hover::after {
+            opacity: 1;
+            visibility: visible;
         }
     `;
     document.head.appendChild(style);
