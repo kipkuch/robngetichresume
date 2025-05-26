@@ -41,7 +41,7 @@ function obfuscateEmail() {
         // Add click handler to copy email
         emailElement.addEventListener('click', () => {
             navigator.clipboard.writeText(email);
-            emailElement.querySelector('.email-display').textContent = 'Copied!';
+            emailElement.querySelector('.email-display').textContent = 'Copied :)';
             setTimeout(() => {
                 emailElement.querySelector('.email-display').textContent = 'robert.ngetich[at]gmail[dot]com';
             }, 1000);
@@ -76,6 +76,38 @@ function toggleSkills(category) {
 
 // Add event listeners for expand buttons
 document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+        .obfuscated-email {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .obfuscated-email::after {
+            content: "Click to copy my email address";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        
+        .obfuscated-email:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Initialize email obfuscation
+    obfuscateEmail();
     // Calculate and display years of experience
     calculateYearsOfExperience();
     
