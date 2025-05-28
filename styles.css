@@ -228,22 +228,204 @@ h2::after {
     color: #666;
 }
 
-/* Experience section */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* Timeline styles */
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.experience-item {
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #3498db, #2ecc71);
+    z-index: 1;
+}
+
+.timeline-year {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+.timeline-year span {
+    position: absolute;
+    left: -100px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3498db;
+    text-align: right;
+    width: 80px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+    z-index: 2;
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
     padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+    margin-left: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
-.experience-item h3 {
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
     color: #2c3e50;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.company {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.duration {
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.responsibilities {
+    list-style: none;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid #3498db;
+}
+
+.responsibilities li {
+    margin-bottom: 0.75rem;
+    color: #666;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.responsibilities li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: -0.5rem;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Add animation for timeline items */
+.timeline-content {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.6s ease forwards;
+}
+
+.timeline-year:nth-child(2) .timeline-content {
+    animation-delay: 0.1s;
+}
+
+.timeline-year:nth-child(3) .timeline-content {
+    animation-delay: 0.2s;
+}
+
+.timeline-year:nth-child(4) .timeline-content {
+    animation-delay: 0.3s;
+}
+
+.timeline-year:nth-child(5) .timeline-content {
+    animation-delay: 0.4s;
+}
+
+.timeline-year:nth-child(6) .timeline-content {
+    animation-delay: 0.5s;
+}
+
+.timeline-year:nth-child(7) .timeline-content {
+    animation-delay: 0.6s;
+}
+
+.timeline-year:nth-child(8) .timeline-content {
+    animation-delay: 0.7s;
+}
+
+.timeline-year:nth-child(9) .timeline-content {
+    animation-delay: 0.8s;
+}
+
+.timeline-year:nth-child(10) .timeline-content {
+    animation-delay: 0.9s;
+}
+
+.timeline-year:nth-child(11) .timeline-content {
+    animation-delay: 1s;
+}
+
+.timeline-year:nth-child(12) .timeline-content {
+    animation-delay: 1.1s;
+}
+
+.timeline-year:nth-child(13) .timeline-content {
+    animation-delay: 1.2s;
+}
+
+.timeline-year:nth-child(14) .timeline-content {
+    animation-delay: 1.3s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive timeline */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 40px;
+    }
+
+    .timeline-year span {
+        left: -60px;
+        width: 60px;
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        margin-left: 2rem;
+    }
 }
 
 .company {
