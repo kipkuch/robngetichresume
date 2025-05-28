@@ -1,0 +1,164 @@
+[
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2023 - Present",
+        "summary": "Leading the development of the RapidPro platform, a mission-critical system for emergency response and public health campaigns.",
+        "details": [
+            "Lead the development and maintenance of the RapidPro platform, a mission-critical system for emergency response and public health campaigns.",
+            "Architect and implement **scalable solutions** for high-availability and high-performance requirements.",
+            "Lead a team of developers in implementing new features and maintaining existing functionality.",
+            "Work closely with product managers and stakeholders to define and prioritize features.",
+            "Implement security best practices and ensure compliance with data protection regulations.",
+            "- Implemented CI/CD pipelines\n- Automated testing frameworks\n- Containerization strategies",
+            "- **Key Technologies**:\n  - `Docker`\n  - `Kubernetes`\n  - `AWS`\n  - `GCP`",
+            "- **Achievements**:\n  - Reduced infrastructure costs by 30%\n  - Improved system uptime to 99.99%\n  - Implemented automated deployment pipeline reducing deployment time by 75%"
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2019 - 2023",
+        "summary": "Key contributor to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements.",
+            "- **Technical Stack**:\n  - `Java`\n  - `Spring Boot`\n  - `PostgreSQL`\n  - `Redis`",
+            "- **Key Projects**:\n  - Message Queue Optimization\n  - Real-time Analytics Dashboard\n  - User Authentication System",
+            "- **Contributions**:\n  - Improved message processing throughput by 50%\n  - Reduced database query time by 40%\n  - Implemented caching layer reducing response time by 60%"
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2017 - 2019",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2015 - 2017",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2013 - 2015",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2011 - 2013",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2009 - 2011",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2007 - 2009",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2005 - 2007",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2003 - 2005",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "2001 - 2003",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    },
+    {
+        "jobTitle": "Senior Software Engineer",
+        "organization": "RapidPro",
+        "fromTo": "1999 - 2001",
+        "summary": "Contributed to the development of RapidPro, focusing on core platform features and scalability.",
+        "details": [
+            "Developed and maintained core platform features for RapidPro, a mission-critical system for emergency response and public health campaigns.",
+            "Implemented scalable solutions for handling millions of messages per day.",
+            "Contributed to the architecture and design of new features.",
+            "Worked on performance optimization and reliability improvements.",
+            "Implemented security features and compliance requirements."
+        ]
+    }
+]
