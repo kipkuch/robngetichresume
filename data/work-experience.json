@@ -2,119 +2,144 @@
     {
         "jobTitle": "Software Engineering Consultant",
         "organization": "Cyber Craft",
-        "fromTo": "2024 - Present",
-        "summary": "Registered a micro enterprise in Paris, France to provide software development services to clients.",
-        "details": [
-            "As an independent consultant specializing in software engineering, I collaborate with clients to enhance their systems and processes, ensuring efficiency and scalability. With a keen understanding of modern technologies and best practices, I tailor solutions to meet the unique needs of each business. Whether refining existing workflows or architecting new software, my approach is rooted in practicality and innovation, helping organizations streamline operations and maximize productivity.By leveraging my expertise, I guide clients through complex technical challenges, offering strategic insights that drive impactful change. From optimizing code performance to integrating cutting-edge tools, I empower businesses to stay ahead in a rapidly evolving digital landscape. My goal is to not only solve immediate problems but also build sustainable frameworks that foster long-term growth and adaptability."
-        ]
+        "fromTo": "2025 - Present",
+        "summary": "I registered a micro enterprise in Paris, France to provide software development services to clients. As an independent consultant, I collaborate with clients to enhance their systems and processes ensuring efficiency and scalability. I tailor solutions to meet the unique needs of a business. Whether refining existing workflows or architecting new software, my approach is rooted in practicality and innovation helping organizations streamline operations and maximize productivity. My goal is to not only solve immediate problems but also build sustainable frameworks that foster long-term growth and adaptability.",
+        "details": []
     },
     {
         "jobTitle": "Technical Lead - Mainframe",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
         "fromTo": "2024",
-        "summary": "Joined the BMW Mainframe team as a Technical Lead to help them modernize their legacy systems.",
+        "summary": "I lead a team to migrate over 60 legacy mainframe applications into cloud native. Once completed, this will vastly improve the efficiency of the applications and reduce cost overheads in maintaining them. The main aspects of the work involved:",
         "details": [
-            "I lead a team to migrate over 60 legacy mainframe applications into cloud native. Once completed, this will vastly improve the efficiency of the applications and reduce cost overheads in maintaining them. The main aspects of the work involved: \n * Evaluating several transpiling technologies (Heirloom, Blu Age & Astadia) to determine the best fit for organisation. \n * Creating a testable & repeatable migration plan for all subsequent transformation projects. This plan needs to cater for Data as well as code migration taking into account batch processes, mainframe ata structures and various character encoding \n * Training plan for devops engineers to ensure they are able to maintain the applications after migration. \n * Implementing a CI/CD pipeline for the migrated applications. \n * Implementing a monitoring system for the migrated applications."
+            "Evaluating several transpiling technologies (Heirloom, Blu Age & Astadia) to determine the best fit for organisation",
+            "Creating a testable & repeatable migration plan for all subsequent transformation projects. This plan needs to cater for Data as well as code migration taking into account batch processes, mainframe data structures and various character encoding",
+            "Training plan for devops engineers to ensure they are able to maintain the applications after migration",
+            "Implementing a CI/CD pipeline for the migrated applications",
+            "Implementing a monitoring system for the migrated applications"
         ]
     },
     {
         "jobTitle": "Solutions Architect",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
         "fromTo": "2023 - 2024",
-        "summary": "I was a Solutions Architect in the planning department",
+        "summary": "Working within the ConRecOrd team in the planning department, I oversaw the ordering platform. The project involved maintenance & enhancements to the platform. This was a JEE application running on several Payara Application Servers. My role was twofold. I was responsible for the ongoing backlog for the legacy system as well as migration to webservices in the BMW cloud. The main aspects of the work involved: ",
         "details": [
-            "Working within the ConRecOrd team in the planning department, I oversaw the ordering platform. The project involved maintenance & enhancements to the platform. This was a JEE application running on several Payara Application Servers. My role was twofold. I was responsible for the ongoing backlog for the legacy system as well as migration to webservices in the BMW cloud. The main aspects of the work involved: \n * Participating in Live releases and maintaining the Bitbucket/Jenkins build pipeline. \n * Pruning the backlog and working with developers to implement new features in the Sprints. \n * Utilising Top down design in analysis of legacy code to decompose it into smaller cloud services and APIs. \n * Negotiating project timelines and resourcing to minimise business impact during cloud migration. \n * Planning cloud resources to ensure minimum cost overruns."
+            "Participating in Live releases and maintaining the Bitbucket/Jenkins build pipeline",
+            "Pruning the backlog and working with developers to implement new features in the Sprints",
+            "Utilising Top down design in analysis of legacy code to decompose it into smaller cloud services and APIs",
+            "Negotiating project timelines and resourcing to minimise business impact during cloud migration",
+            "Planning cloud resources to ensure minimum cost overruns"
         ]
     },
     {
         "jobTitle": "Technical Lead",
         "organization": "Bluebean Software",
         "fromTo": "2022 - 2023",
-        "summary": "Technical lead on a banking project for the UAE",
+        "summary": "I joined a diverse team of software developers, analysts and domain experts collaborating across the UAE, Italy and South Africa to develop a central banking platform. This was a project demanding high availability and performance. My tasks on this project entailed: ",
         "details": [
-            "I joined a diverse team of software developers, analysts and domain experts collaborating across the UAE, Italy and South Africa to develop a central banking platform. This was a project demanding high availability and performance. My tasks on this project entailed: \n * Design & refine feature requirements with stakeholders. \n * Identify & backlog technical debt on legacy system. \n * Implement transaction handling and in-memory caching code. \n * Unit and integration testing. \n * Onboarding & assisting junior developers on the team."
+            "Design & refine feature requirements with stakeholders",
+            "Identify & backlog technical debt on legacy system",
+            "Implement transaction handling and in-memory caching code",
+            "Unit and integration testing",
+            "Onboarding & assisting junior developers on the team"
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
         "fromTo": "2021 - 2022",
-        "summary": "Senior Java Developer in the planning department",
+        "summary": "I joined the Proflex team within BMW to assist in building a new volume & capacity planning platform. This is used by the planning department to ensure that plants are producing the correct volumes and mix of vehicles. My duties in this role entailed:",
         "details": [
-            "I joined the Proflex team within BMW to assist in building a new volume & capacity planning platform. This is used by the planning department to ensure that plants are producing the correct volumes and mix of vehicles. My duties in this role entailed: \n * Software development to specification. \n * Backlog grooming with the dev team. \n * Estimating, planning and resource allocation. \n * Integration to external systems e.g. Plant Calendar. \n * Maintenance and support."
+            "Software development to specification",
+            "Backlog grooming with the dev team",
+            "Estimating, planning and resource allocation",
+            "Integration to external systems e.g. Plant Calendar",
+            "Maintenance and support."
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "First National Bank, South Africa",
         "fromTo": "2020",
-        "summary": "Senior Java Developer in the Online Banking team",
+        "summary": "I joined the Online banking team for a one year contract in 2020. Due to the global pandemic, there was a lot of effort made in shifting physical customer interactions to online channels. As a maintenance and enhancement engineer, my roles were:",
         "details": [
-            "I joined the Online banking team for a one year contract in 2020. Due to the global pandemic, there was a lot of effort made in shifting physical customer interactions to online channels. As a maintenance and enhancement engineer, my roles were: \n * Backlog grooming with the dev team. \n * Implement software to client specifications. \n * Identify technical debt for the backlog. \n * Participate in Live releases."
+             "Backlog grooming with the dev team",
+             "Implement software to client specifications",
+             "Identify technical debt for the backlog",
+             "Participate in Live releases."
         ]
     },
     {
         "jobTitle": "Integration Specialist, Systems Analyst",
         "organization": "Ernst & Young (EY) IT Advisory",
         "fromTo": "2015 - 2019",
-        "summary": "IT Consultant for EY South Africa",
+        "summary": "At EY, I worked in several roles across various client engagements. Below are listed the most memorable:",
         "details": [
-            "At EY, I worked in several roles across various client engagements. Below are listed the most memorable: \n ### Discovery Bank \n I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems. This was done for a new Digital first banking platform that Discovery was building \n ### Standard Bank South Africa \n I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers. \n ### Mercantile Bank \n I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt."
+            "**Discovery Bank**: I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems. This was done for a new Digital first banking platform for Discovery",
+            "**Standard Bank South Africa**: I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers",
+            "**Mercantile Bank**: I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt."
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Izazi Software",
         "fromTo": "2014 - 2015",
-        "summary": "Senior Developer for a Loan Origination Platform",
+        "summary": "Izazi Software was a software company specialising in financial services software. I worked on their loan origination platform (LORIS) migrating code from JEE into a Spring JPA application. While there, I also worked on feature demos for clients. My responsibilities there included:",
         "details": [
-            "Izazi was a software company specialising in financial services software. I worked on their loan origination platform (LORIS) migrating code from JEE into a Spring JPA application. While there, I also worked on feature demos for clients. My responsibilities there included: \n * Write and deliver features to specification \n * Liaising with QA and users to resolve software defects \n * Conduct assessment and interviews for new hires."
+            "Write and deliver features to specification",
+            "Liaising with QA and users to resolve software defects",
+            "Conduct assessment and interviews for new hires."
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Argility Retail Solutions",
         "fromTo": "2012 - 2014",
-        "summary": "Senior Java Developer for a retail solutions company",
+        "summary": "I worked on the Argility point of sale system as well as their order switching and merchandising products. My tasks there included:",
         "details": [
-            "I worked on the Argility point of sale system as well as their order switching and merchandising products. My tasks there included: \n * Participating in developer agile ceremonies. \n * Creating technical specifications for junior developers. \n * Maintaining the order switching system and merchandise 'bursting' solution. \n * Resolve technical debt and defects. \n * Standby during high volume periods e.g. month end batch runs."
+            "Participating in developer agile ceremonies",
+            "Creating technical specifications for junior developers",
+            "Maintaining the order switching system and merchandise 'bursting' solution",
+            "Resolve technical debt and defects",
+            "Standby during high volume periods e.g. month end batch runs"
         ]
     },
     {
         "jobTitle": "Java Developer",
         "organization": "Momentum",
         "fromTo": "2009 - 2012",
-        "summary": "Java developer in the employee benefits department",
+        "summary": "Momentum is a financial services company based in South Africa. During my time there, I supported and maintained their scanning and indexing solution for customer claims. I was also involved in other aspects of their document management platform, namely: OCI, for faster loading of paper claims, and document generation for sending out automated correspondence to customers. My day to day tasks involved:",
         "details": [
-            "Momentum is a financial services company based in South Africa. During my time there, I supported and maintained their scanning and indexing solution for customer claims. I was also involved in other aspects of their document management platform, namely: OCI, for faster loading of paper claims, and document generation for sending out automated correspondence to customers. My day to day tasks involved: \n * Software support and maintenance \n * Production management and monitoring \n * Agile ceremonies (grooming, design, task allocation, estimating etc)."
+            "Software support and maintenance",
+            "Production management and monitoring",
+            "Agile ceremonies (grooming, design, task allocation, estimating etc)"
         ]
     },
     {
         "jobTitle": "Java Developer",
         "organization": "Alacrity Software",
         "fromTo": "2007 - 2009",
-        "summary": "Contract java developer",
+        "summary": "I worked on their OneView product for their client, Momentum Employee Benefits. This was a product that supported processing of insurance claims. I worked on migrating the platform to Spring as well as two major features: Scanning and indexing, and Document generation. My day to day tasks were:",
         "details": [
-            "I worked on their OneView product for their client, Momentum Employee Benefits. This was a product that supported processing of insurance claims. I worked on migrating the platform to Spring as well as two major features: Scanning and indexing, and Document generation. My day to day tasks were: \n * Software support and maintenance \n * Production management and monitoring \n * Agile ceremonies (grooming, design, task allocation, estimating etc)."
+            "Software support and maintenance",
+            "Production management and monitoring",
+            "Agile ceremonies (grooming, design, task allocation, estimating etc)."
         ]
     },
     {
         "jobTitle": "Junior Java Developer",
         "organization": "Fidentia Financial Services",
         "fromTo": "2005 - 2007",
-        "summary": "Junior developer for a loyalty platform",
-        "details": [
-            "I joined the Fidentia 'Infinity' team to build a customer rewards platform. My main focus was on the front end which was done in Macromedia Flex (Later Adobe Flex). I also implemented, maintained and customised an open source version of Mantis for defect tracking."
-        ]
+        "summary": "I joined the Fidentia 'Infinity' team to build a customer rewards platform. My main focus was on the front end which was done in Macromedia Flex (Later Adobe Flex). I also implemented, maintained and customised an open source version of Mantis for defect tracking.",
+        "details": []
     },
     {
         "jobTitle": "IT Technician",
         "organization": "Ziton",
         "fromTo": "2004",
-        "summary": "IT Technician for a fire alarm company",
-        "details": [
-            "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT depertment as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system."
-        ]
+        "summary": "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT depertment as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system.",
+        "details": []
     }
 
 ]
