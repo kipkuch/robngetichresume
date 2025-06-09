@@ -301,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         .obfuscated-email::after {
-            content: "Click to copy my email address";
             position: absolute;
             bottom: 100%;
             left: 50%;
