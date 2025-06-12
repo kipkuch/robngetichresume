@@ -106,7 +106,7 @@
             "AWS Kinesis"
         ],
         "successes": [
-            "Successfully shifted various aspects of production planning from a set of excel spreadsheets to a web application. This led to a number of benefits, for example: data is always current - users always see the latest data, multiple users can work on a production plan, ease of data export to other systems via API, easier integration into other BMW systems, greater security and access control etc."
+            "Successfully shifted most aspects of production planning from a set of excel spreadsheets to a web application. This led to a number of benefits, for example: data is always current rather than existing in various file versions, multiple users could work on production plans, data could be exported to other systems via API, there was easier integration into other BMW systems, there was greater security and access control etc."
         ]
     },
     {
