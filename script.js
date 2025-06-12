@@ -188,7 +188,7 @@ async function loadWorkExperience() {
             timelineYear.className = 'timeline-year';
             
             const yearSpan = document.createElement('span');
-            yearSpan.textContent = item.fromTo.split(' - ')[0]; // Extract the start year
+            yearSpan.textContent = item.duration.split(' - ')[0]; // Extract the start year
             
             const timelineItem = document.createElement('div');
             timelineItem.className = 'timeline-item';
@@ -209,25 +209,57 @@ async function loadWorkExperience() {
             
             const duration = document.createElement('p');
             duration.className = 'duration';
-            duration.textContent = item.fromTo;
+            duration.textContent = item.duration;
             
             const summary = document.createElement('p');
             summary.textContent = item.summary;
             
             const responsibilities = document.createElement('div');
             responsibilities.className = 'responsibilities';
+
+            const techStack = document.createElement('div');
+            techStack.className = 'tech-stack';
+
+            const successes = document.createElement('div');
+            successes.className = 'successes';
             
-            // Process each detail item
-            item.details.forEach(detail => {
+            // Process each responsibility item
+            item.responsibilities.forEach(responsibility => {
                 const responsibilityItem = document.createElement('div');
                 responsibilityItem.className = 'responsibility-item';
                 
                 // Parse markdown and create inner HTML
-                const markdownContent = marked.parse(detail);
+                const markdownContent = marked.parse(responsibility);
                 console.log('Parsed markdown:', markdownContent);
                 responsibilityItem.innerHTML = markdownContent;
                 
                 responsibilities.appendChild(responsibilityItem);
+            });
+
+            // Process each tech stack item
+            item.techStack.forEach(techStackItem => {
+                const techStackItemElement = document.createElement('div');
+                techStackItemElement.className = 'tech-stack-item';
+                
+                // Parse markdown and create inner HTML
+                const markdownContent = marked.parse(techStackItem);
+                console.log('Parsed markdown:', markdownContent);
+                techStackItemElement.innerHTML = markdownContent;
+                
+                techStack.appendChild(techStackItemElement);
+            });
+
+            // Process each success item
+            item.successes.forEach(successItem => {
+                const successItemElement = document.createElement('div');
+                successItemElement.className = 'success-item';
+                
+                // Parse markdown and create inner HTML
+                const markdownContent = marked.parse(successItem);
+                console.log('Parsed markdown:', markdownContent);
+                successItemElement.innerHTML = markdownContent;
+                
+                successes.appendChild(successItemElement);
             });
             
             // Append all elements to the content
@@ -236,6 +268,8 @@ async function loadWorkExperience() {
             timelineContent.appendChild(duration);
             timelineContent.appendChild(summary);
             timelineContent.appendChild(responsibilities);
+            timelineContent.appendChild(techStack);
+            timelineContent.appendChild(successes);
             
             timelineItem.appendChild(timelineMarker);
             timelineItem.appendChild(timelineContent);
