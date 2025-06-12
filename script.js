@@ -217,11 +217,7 @@ async function loadWorkExperience() {
             const responsibilities = document.createElement('div');
             responsibilities.className = 'responsibilities';
 
-            const techStack = document.createElement('div');
-            techStack.className = 'tech-stack';
-
-            const successes = document.createElement('div');
-            successes.className = 'successes';
+            
             
             // Process each responsibility item
             item.responsibilities.forEach(responsibility => {
@@ -236,39 +232,57 @@ async function loadWorkExperience() {
                 responsibilities.appendChild(responsibilityItem);
             });
 
-            // Process each tech stack item
-            item.techStack.forEach(techStackItem => {
-                const techStackItemElement = document.createElement('div');
-                techStackItemElement.className = 'tech-stack-item';
+            // Create tech stack section
+            const techStack = document.createElement('div');
+            techStack.className = 'tech-stack';
+
+            // Add tech stack items
+            const techStackItems = document.createElement('div');
+            techStackItems.className = 'tech-stack-items';
+
+            item.techStack.forEach(tech => {
+                const techItem = document.createElement('div');
+                techItem.className = 'tech-item';
                 
                 // Parse markdown and create inner HTML
-                const markdownContent = marked.parse(techStackItem);
+                const markdownContent = marked.parse(tech);
                 console.log('Parsed markdown:', markdownContent);
-                techStackItemElement.innerHTML = markdownContent;
+                techItem.innerHTML = markdownContent;
                 
-                techStack.appendChild(techStackItemElement);
+                techStackItems.appendChild(techItem);
             });
 
-            // Process each success item
-            item.successes.forEach(successItem => {
-                const successItemElement = document.createElement('div');
-                successItemElement.className = 'success-item';
+            techStack.appendChild(techStackItems);
+
+            // Create successes section
+            const successes = document.createElement('div');
+            successes.className = 'successes';
+
+            // Add successes items
+            const successesItems = document.createElement('div');
+            successesItems.className = 'successes-items';
+
+            item.successes.forEach(success => {
+                const successItem = document.createElement('div');
+                successItem.className = 'success-item';
                 
                 // Parse markdown and create inner HTML
-                const markdownContent = marked.parse(successItem);
+                const markdownContent = marked.parse(success);
                 console.log('Parsed markdown:', markdownContent);
-                successItemElement.innerHTML = markdownContent;
+                successItem.innerHTML = markdownContent;
                 
-                successes.appendChild(successItemElement);
+                successesItems.appendChild(successItem);
             });
+
+            successes.appendChild(successesItems);
             
             // Append all elements to the content
             timelineContent.appendChild(h3);
             timelineContent.appendChild(company);
             timelineContent.appendChild(duration);
+            timelineContent.appendChild(techStack);
             timelineContent.appendChild(summary);
             timelineContent.appendChild(responsibilities);
-            timelineContent.appendChild(techStack);
             timelineContent.appendChild(successes);
             
             timelineItem.appendChild(timelineMarker);

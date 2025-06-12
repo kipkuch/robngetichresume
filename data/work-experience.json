@@ -5,12 +5,7 @@
         "duration": "2025 - Present",
         "summary": "I registered a micro enterprise in Paris, France to provide software development services to clients. As an independent consultant, I collaborate with clients to enhance their systems and processes ensuring efficiency and scalability. I tailor solutions to meet the unique needs of a business. Whether refining existing workflows or architecting new software, my approach is rooted in practicality and innovation helping organizations streamline operations and maximize productivity. My goal is to not only solve immediate problems but also build sustainable frameworks that foster long-term growth and adaptability.",
         "responsibilities": [],
-        "techStack": [
-            "Mainframe",
-            "Cloud Native",
-            "CI/CD",
-            "Monitoring Systems"
-        ],
+        "techStack": ["Java", "Springboot", "AWS", "JPA", "Apigee", "Angular", "Kafka", "JMS"],
         "successes": []
     },
     {
@@ -26,10 +21,13 @@
             "Implementing a monitoring system for the migrated applications"
         ],
         "techStack": [
-            "Mainframe",
-            "Cloud Native",
-            "CI/CD",
-            "Monitoring Systems"
+            "Java",
+            "Springboot",
+            "Mainframe (IBM z/OS, COBOL, JCL, DB2)",
+            "AWS Cloud",
+            "Blu Age",
+            "Heirloom",
+            "Astadia"
         ],
         "successes": [
             "Successfully migrated proof of concept application to AWS Blu Age infrastructure"
