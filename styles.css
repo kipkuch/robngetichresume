@@ -699,6 +699,13 @@ h2::after {
 }
 
 /* Successes Section Styles */
+.section-separator {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
 .successes {
     position: relative;
     padding-left: 1em;

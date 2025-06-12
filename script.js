@@ -283,6 +283,12 @@ async function loadWorkExperience() {
             timelineContent.appendChild(techStack);
             timelineContent.appendChild(summary);
             timelineContent.appendChild(responsibilities);
+
+            // Add a subtle separator before successes
+            const separator = document.createElement('div');
+            separator.className = 'section-separator';
+            timelineContent.appendChild(separator);
+
             timelineContent.appendChild(successes);
             
             timelineItem.appendChild(timelineMarker);
