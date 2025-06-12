@@ -4,7 +4,14 @@
         "organization": "Cyber Craft",
         "fromTo": "2025 - Present",
         "summary": "I registered a micro enterprise in Paris, France to provide software development services to clients. As an independent consultant, I collaborate with clients to enhance their systems and processes ensuring efficiency and scalability. I tailor solutions to meet the unique needs of a business. Whether refining existing workflows or architecting new software, my approach is rooted in practicality and innovation helping organizations streamline operations and maximize productivity. My goal is to not only solve immediate problems but also build sustainable frameworks that foster long-term growth and adaptability.",
-        "details": []
+        "details": [],
+        "techStack": [
+            "Mainframe",
+            "Cloud Native",
+            "CI/CD",
+            "Monitoring Systems"
+        ],
+        "successes": []
     },
     {
         "jobTitle": "Technical Lead - Mainframe",
@@ -17,6 +24,15 @@
             "Training plan for devops engineers to ensure they are able to maintain the applications after migration",
             "Implementing a CI/CD pipeline for the migrated applications",
             "Implementing a monitoring system for the migrated applications"
+        ],
+        "techStack": [
+            "Mainframe",
+            "Cloud Native",
+            "CI/CD",
+            "Monitoring Systems"
+        ],
+        "successes": [
+            "Successfully migrated proof of concept application to AWS Blu Age infrastructure"
         ]
     },
     {
@@ -30,6 +46,19 @@
             "Utilising Top down design in analysis of legacy code to decompose it into smaller cloud services and APIs",
             "Negotiating project timelines and resourcing to minimise business impact during cloud migration",
             "Planning cloud resources to ensure minimum cost overruns"
+        ],
+        "techStack": [
+            "JEE",
+            "Payara",
+            "Springboot",
+            "JSP",
+            "Jenkins",
+            "Bitbucket"
+        ],
+        "successes": [
+            "Was able to reduce runtime of a long running stock optimisation job by 67%. This was done with the help of debugging tools and performance metrics analysis",
+            "Implemented a feature to allocate various vehicle production components based on market weightings. This saved business a lot of time especially during the semi-conductor shortage in 2022",
+            "Successfully decomposed our 5 legacy JEE applications into a microservice architecture that was presented to business for implementation"
         ]
     },
     {
@@ -43,6 +72,19 @@
             "Implement transaction handling and in-memory caching code",
             "Unit and integration testing",
             "Onboarding & assisting junior developers on the team"
+        ],
+        "techStack": [
+            "Java",
+            "Springboot",
+            "Red Hat Data Grid",
+            "Openshift",
+            "Kafka",
+            "JMS"
+        ],
+        "successes": [
+            "Implemented high-performance transaction handling via in-memory caching",
+            "Successfully re-engineered many features of the legacy system to springboot",
+            "Launched the application in openshift pods to aid in more efficient horizontal scaling for high performance"
         ]
     },
     {
@@ -56,6 +98,17 @@
             "Estimating, planning and resource allocation",
             "Integration to external systems e.g. Plant Calendar",
             "Maintenance and support."
+        ],
+        "techStack": [
+            "Java",
+            "Springboot",
+            "Angular",
+            "JMS",
+            "Kafka",
+            "AWS Kinesis"
+        ],
+        "successes": [
+            "Successfully shifted various aspects of production planning from a set of excel spreadsheets to a web application. This led to a number of benefits, for example: data is always current - users always see the latest data, multiple users can work on a production plan, ease of data export to other systems via API, easier integration into other BMW systems, greater security and access control etc."
         ]
     },
     {
@@ -68,6 +121,17 @@
              "Implement software to client specifications",
              "Identify technical debt for the backlog",
              "Participate in Live releases."
+        ],
+        "techStack": [
+            "Java",
+            "JSP & JSF",
+            "Springboot",
+            "JMS",
+            "Kafka"
+        ],
+        "successes": [
+            "Implemented a new backend for generation and delivery of adhoc bank statements for customers across africa",
+            "Enhanced customer convenience by shifting many physical interactions to online channels"
         ]
     },
     {
@@ -79,52 +143,118 @@
             "**Discovery Bank**: I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems. This was done for a new Digital first banking platform for Discovery",
             "**Standard Bank South Africa**: I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers",
             "**Mercantile Bank**: I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt."
+        ],
+        "techStack": [
+            "Banking Systems",
+            "Integration Layer",
+            "2FA Implementation",
+            "Wholesale Lending",
+            "Digital Banking"
+        ],
+        "successes": [
+            "Was a key contributor to the launching of South Africa's first all digital banking platform for Discovery bank",
+            "Through the use of mutual TLS & JWT, enhanced security for the Discovery bank's integration layer",
+            "Tailored a wholesale lending solution for Standard bank customers across the african continent",
+            "Greatly minimised sync time between credit card & cheque/savings account systems at Mercantile bank by integrating the two systems",
+            "Implemented 2FA at Mercantile bank using Entersekt thereby enhancing security for customers",
+            "Configured high availability via hot failover for mercantile bank systems on Tibco BusinessWorks"
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Izazi Software",
         "fromTo": "2014 - 2015",
-        "summary": "Izazi Software was a software company specialising in financial services software. I worked on their loan origination platform (LORIS) migrating code from JEE into a Spring JPA application. While there, I also worked on feature demos for clients. My responsibilities there included:",
+        "summary": "Izazi Software was a software company specialising in financial services software. I worked on their loan origination platform (LORIS) migrating code from JEE into a Spring application. While there, I also worked on feature demos for clients. My responsibilities there included:",
         "details": [
             "Write and deliver features to specification",
-            "Liaising with QA and users to resolve software defects",
-            "Conduct assessment and interviews for new hires."
+            "Perform product demos",
+            "Resolve issues at client sites",
+            "Conduct assessment and interviews for new hires"
+        ],
+        "techStack": [
+            "Java",
+            "Spring: JPA, Batch, WS, REST & Security",
+            "JSP",
+            "Tibco: EMS (messaging), BusinessWorks (BPM), GI (user interface)",
+            "Wildfly (Application server)"
+        ],
+        "successes": [
+            "Successfully implemented and maintained the product at a large customer in South Africa (Eskom)",
+            "Converted the application from JEE to Spring",
+            "Working with sales, participated in many sales demos for clients"
         ]
     },
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Argility Retail Solutions",
         "fromTo": "2012 - 2014",
-        "summary": "I worked on the Argility point of sale system as well as their order switching and merchandising products. My tasks there included:",
+        "summary": "I worked on the Argility point of sale system as well as their order switching and merchandising products. We served over 1800 locations in South Africa, each running a tomcat instance with our java application contained. Periodic data syncing was done via XML files sent over FTP. My tasks there included:",
         "details": [
-            "Participating in developer agile ceremonies",
-            "Creating technical specifications for junior developers",
             "Maintaining the order switching system and merchandise 'bursting' solution",
-            "Resolve technical debt and defects",
+            "Maintaining data replication for in-store to central databases",
+            "Participating in developer agile ceremonies",
+            "Creating technical specifications",
             "Standby during high volume periods e.g. month end batch runs"
+        ],
+        "techStack": [
+            "Java (JDK)",
+            "JSP",
+            "Vaadin (UI)",
+            "Tomcat",
+            "Linux bash (scheduled batch jobs - cron)"
+        ],
+        "successes": [
+            "Implemented a make-up and break-up feature to allow for products to be grouped together under a single SKU or split up into multiple SKUs as business required",
+            "Performed numerous patching and defect resolution for their legacy data replication",
+            "Improved order processing"
         ]
     },
     {
         "jobTitle": "Java Developer",
         "organization": "Momentum",
         "fromTo": "2009 - 2012",
-        "summary": "Momentum is a financial services company based in South Africa. During my time there, I supported and maintained their scanning and indexing solution for customer claims. I was also involved in other aspects of their document management platform, namely: OCI, for faster loading of paper claims, and document generation for sending out automated correspondence to customers. My day to day tasks involved:",
+        "summary": "Momentum is a financial services company based in South Africa. During my time there, I was mainly involved in their document capture and management platform. This was a system utilised by the claims department. I was also pulled in to assist on their MTax platform from time to time. My day to day tasks involved:",
         "details": [
             "Software support and maintenance",
             "Production management and monitoring",
             "Agile ceremonies (grooming, design, task allocation, estimating etc)"
+        ],
+        "techStack": [
+            "Java (JEE)",
+            "JBoss",
+            "JSF & JSP",
+            "Oracle Database",
+            "Hibernate",
+            "Staffware (BPM)",
+            "Nagios Production Monitoring"
+        ],
+        "successes": [
+            "Integrated with Fujitech scanners to enable document capture and OCR for paper forms without leaving the application. The OCR greatly reduced capture time for data entry clerks",
+            "Using itext, eliminated users' need to 'print to PDF' to generate documents for claims processing",
+            "Was appointed as 'Gatekeeper' for the document management codebase",
+            "Greatly enhanced production monitoring by adding modules to Nagios"
         ]
     },
     {
         "jobTitle": "Java Developer",
         "organization": "Alacrity Software",
         "fromTo": "2007 - 2009",
-        "summary": "I worked on their OneView product for their client, Momentum Employee Benefits. This was a product that supported processing of insurance claims. I worked on migrating the platform to Spring as well as two major features: Scanning and indexing, and Document generation. My day to day tasks were:",
+        "summary": "I worked on their OneView product for their client, Momentum Employee Benefits. This was a product that supported processing of insurance claims. I worked on the claims processing system as well as document generation. My day to day tasks were:",
         "details": [
             "Software support and maintenance",
             "Production management and monitoring",
             "Agile ceremonies (grooming, design, task allocation, estimating etc)."
+        ],
+        "techStack": [
+            "Java",
+            "JSP",
+            "JBoss",
+            "Hibernate",
+            "Oracle Database"
+        ],
+        "successes": [
+            "Using Freemarker, we created a document generation solution that would output RTF documents that could thereafter be customised by users. This greatly shortened processing times for creating standard yet personalised correspondence for customers.",
+            "Integrated our templating solution with Microsoft Word to enable users to edit documents without leaving our application. This minimised time and effort for users having to download, edit and save documents outside of the application."
         ]
     },
     {
@@ -132,14 +262,33 @@
         "organization": "Fidentia Financial Services",
         "fromTo": "2005 - 2007",
         "summary": "I joined the Fidentia 'Infinity' team to build a customer rewards platform. My main focus was on the front end which was done in Macromedia Flex (Later Adobe Flex). I also implemented, maintained and customised an open source version of Mantis for defect tracking.",
-        "details": []
+        "details": [],
+        "techStack": [
+            "Java",
+            "JDBC",
+            "Tomcat",
+            "Macromedia Flex",
+            "JSP",
+            "SOAP Webservices",
+            "Mantis defect tracking"
+        ],
+        "successes": [
+            "I was instrumental in delivering the rewards lottery functionality i.e. given certain criteria, find and distribute points to certain customers",
+            "Forked Mantis source and customised our own defect tracking system. This was pre-atlassian, there wasn't an industry standard for such a system.",
+            "Learned and used Macromedia flex to great effect in crafting beautiful UIs for the rewards platform"
+        ]
     },
     {
         "jobTitle": "IT Technician",
         "organization": "Ziton",
         "fromTo": "2004",
         "summary": "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT depertment as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system.",
-        "details": []
+        "details": [],
+        "techStack": [],
+        "successes": [
+            "Successfully assembled my first computer system",
+            "Automated data entry via Excel"
+        ]
     }
 
 ]
