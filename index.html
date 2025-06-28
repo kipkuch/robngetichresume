@@ -24,7 +24,15 @@
 <body>
     <!-- Floating Menu -->
     <nav class="floating-menu">
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <ul>
+            <li><a href="#top" class="nav-link">Back to top</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#languages" class="nav-link">Languages</a></li>
@@ -33,7 +41,7 @@
             <li><a href="#education" class="nav-link">Education</a></li>
         </ul>
     </nav>
-    <div class="container">
+    <div class="container" id="top">
         <header>
             <div class="profile-section">
                 <div class="profile-image">
@@ -52,7 +60,7 @@
         </header>
 
         <main>
-            <section class="about">
+            <section class="about" id="about">
                 <h2>About Me</h2>
                 <p>I have worked as a Software Engineer for <span id="years-of-experience"></span> years. I have
                     experience in leading teams, designing and building full stack
@@ -61,7 +69,7 @@
                     Banking, Insurance, Automotive and Retail industries.</p>
             </section>
 
-            <section class="skills">
+            <section class="skills" id="skills">
                 <h2>Skills</h2>
                 <div class="skills-container">
                     <div class="skills-grid">
@@ -108,7 +116,7 @@
                 <button class="skills-expand-button" data-expanded="false">Show more</button>
             </section>
 
-            <section class="languages">
+            <section class="languages" id="languages">
                 <h2>Spoken Languages</h2>
                 <div class="languages-grid">
                     <div class="language-item">
@@ -132,21 +140,21 @@
                 </div>
             </section>
 
-            <section class="experience">
+            <section class="experience" id="work-experience">
                 <h2>Work Experience</h2>
                 <div class="timeline-container" id="timeline-container">
                     <!-- Timeline items will be populated by JavaScript -->
                 </div>
             </section>
 
-            <section class="projects">
+            <section class="projects" id="projects">
                 <h2>Project Highlights</h2>
                 <div class="projects-container" id="projects-container">
                     <!-- Projects will be populated by JavaScript -->
                 </div>
             </section>
 
-            <section class="education">
+            <section class="education" id="education">
                 <h2>Education</h2>
                 <div class="education-grid">
                     <div class="education-item">

@@ -183,9 +183,30 @@ function initializePage() {
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
+                        // Close mobile menu after clicking a link
+                        if (window.innerWidth <= 768) {
+                            floatingMenu.classList.remove('expanded');
+                        }
                     }
                 });
             });
+
+            // Add toggle functionality for mobile menu
+            const menuToggle = floatingMenu.querySelector('.menu-toggle');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    floatingMenu.classList.toggle('expanded');
+                });
+
+                // Close menu when clicking outside on mobile
+                document.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768 && 
+                        !floatingMenu.contains(e.target) && 
+                        floatingMenu.classList.contains('expanded')) {
+                        floatingMenu.classList.remove('expanded');
+                    }
+                });
+            }
         }
 
         // Initialize floating button
