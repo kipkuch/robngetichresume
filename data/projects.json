@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Discovery Bank Integration APIs",
+        "techStack": [
+            "Java",
+            "Springboot",
+            "Docker",
+            "Apigee",
+            "Kafka",
+            "JMS"
+        ],
+        "detail": "With a team of five, we built an integration layer for an all digital bank. The bank required that all channels (ATM, Mobile, Online and Internal Systems) be able to communicate with the various backend systems in a uniform manner. Using Apigee, we configured 2-way SSL to ensure only designated servers were able to communicate with the API layer. We then configured JWT token authentication and authorization to verify customer/internal credentials. Apigee also acts like a proxy, so we were also able to rate limit requests to prevent abuse. With security concerns out of the way, we hosted the various APIs and published them for consumers.\n Apigee also allows for service orchestration, therefore when a request came in requiring the participation of two or more systems, we were able to call out to existing bank APIs (Mostly SOAP based) or our own springboot applications (built as required for more complex interactions and hosted in a Docker environment). Data retrieved from various systems could then be consolidated into a single response back to the caller. \n The end result was a uniform set of APIs that all channels could utilise, with priority given to internal systems which typically request larger volumes of data than individual bank customers."
+    },
+    {
+        "title": "Mercantile Bank Integration",
+        "techStack": [
+            "TIBCO BusinessWorks",
+            "Entersekt",
+            "TIBCO MQueue (JMS)",
+            "SOAP"
+        ],
+        "detail": "We were engaged by Mercantile bank in South Africa to provide better integration between their credit card system and cheque/savings accounts. The syncing was previously done using daily batch imports and exports. Using TIBCO BusinessWorks, we were able to build relatime orchestration workflows using SOAP and JMS (via MQueue) where appropriate. This provided real time syncing of data between applications. \nFor the customers, this meant that they were able to see bank balances adjust immediately as transactions occurred. My team also engaged Entersekt to provide multifactor authentication for various interactions. The project was delivered on time and within budget, resulting in a big win for the bank and customers."
+    },
+    {
+        "title": "Stock Trading Application",
+        "techStack": [
+            "Java",
+            "Springboot",
+            "JSF"
+        ],
+        "detail": "This was done as a side project for a small-scale stockbroker. The application presented an interactive user interface from which customers could trade stocks and view their portfolio. The UI was created in JSF using Primefaces. In the time before Angular and React, JSF provided a visually appealing front end with a rich user experience."
+    },
+    {
+        "title": "Cashflow Application",
+        "techStack": [
+            "Android SDK"
+        ],
+        "detail": "This was built as a side project to experiment with the Android SDK. The application scans SMS on the device and organises transaction messages coming from all my bank accounts to give an accurate position of my cashflow. This code is available on github."
+    }
+
+]
