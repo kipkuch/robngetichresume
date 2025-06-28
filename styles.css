@@ -572,57 +572,68 @@ h2::after {
 
 /* Responsive timeline */
 @media (max-width: 768px) {
-    .timeline-container::before {
-        left: 40px;
-    }
-
-    .timeline-year span {
-        left: -60px;
-        width: 60px;
-        font-size: 1rem;
+    .timeline-container::before,
+    .timeline-year span,
+    .timeline-marker {
+        display: none;
     }
 
     .timeline-content {
-        margin-left: 2rem;
+        margin: 0;
+        padding: 1.25rem;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-}
 
-.company {
-    color: #3498db;
-    margin-bottom: 0.5rem;
-}
+    .timeline-item {
+        width: 100%;
+        margin-left: 0;
+    }
 
-.duration {
-    color: #666;
-    margin-bottom: 1rem;
-}
+    .company {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
 
-.responsibilities {
-    list-style: none;
-    margin-left: 1rem;
-}
+    .duration {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 1.25rem;
+    }
 
-.responsibilities li {
-    margin-bottom: 0.5rem;
-    color: #666;
-}
+    .work-experience-summary {
+        padding: 1rem;
+        background: var(--card-bg);
+        border-radius: 8px;
+        margin-bottom: 1.25rem;
+    }
 
-/* Education section */
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
+    .responsibilities {
+        margin: 0;
+        padding-left: 1.75rem;
+    }
 
-.education-item {
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-}
+    .responsibilities li {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 
-.institution {
-    color: #3498db;
-    margin-bottom: 0.5rem;
+    .tech-stack {
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-stack-items {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .tech-item {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        margin: 0.25rem 0;
+    }
 }
 
 /* Projects section */
