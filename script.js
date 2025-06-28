@@ -158,6 +158,9 @@ function initializePage() {
         // Load work experience
         loadWorkExperience();
 
+        // Load projects
+        loadProjects();
+
         console.log('Page initialized successfully');
     } catch (error) {
         console.error('Error initializing page:', error);
@@ -321,6 +324,70 @@ async function loadWorkExperience() {
         const timelineContainer = document.getElementById('timeline-container');
         if (timelineContainer) {
             timelineContainer.innerHTML = `<p style="color: red;">Error loading work experience data. Please check the console for details.</p>`;
+        }
+    }
+}
+
+async function loadProjects() {
+    try {
+        // Test if the file exists
+        const response = await fetch('data/projects.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const projects = await response.json();
+        console.log('Projects data loaded:', projects);
+        
+        const projectsGrid = document.getElementById('projects-grid');
+        if (!projectsGrid) {
+            throw new Error('Projects grid not found');
+        }
+
+        projects.forEach((item) => {
+            const projectItem = document.createElement('div');
+            projectItem.className = 'project-item';
+            
+            const h3 = document.createElement('h3');
+            h3.textContent = item.title;
+
+            const techStack = document.createElement('div');
+            techStack.className = 'tech-stack';
+
+            const techStackItems = document.createElement('div');
+            techStackItems.className = 'tech-stack-items';
+
+            item.techStack.forEach(tech => {
+                const techItem = document.createElement('div');
+                techItem.className = 'tech-item';
+                techItem.textContent = tech;
+                techStackItems.appendChild(techItem);
+            });
+
+            techStack.appendChild(techStackItems);
+            
+            const projectDescription = document.createElement('div');
+            projectDescription.className = 'project-description';
+
+            // Parse markdown and create inner HTML for project description
+            const markdownContent = marked.parse(item.description);
+            console.log('Parsed markdown:', markdownContent);
+            projectDescription.innerHTML = markdownContent;
+            
+            projectItem.appendChild(h3);
+            projectItem.appendChild(techStack);
+            projectItem.appendChild(projectDescription);
+            
+            projectsGrid.appendChild(projectItem);
+        })
+        
+        
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        // Add a fallback message to the page
+        const projectsGrid = document.getElementById('projects-grid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = `<p style="color: red;">Error loading project data. Please check the console for details.</p>`;
         }
     }
 }
