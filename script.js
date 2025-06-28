@@ -161,6 +161,31 @@ function initializePage() {
         // Load projects
         loadProjects();
 
+        // Initialize floating button
+        const floatingButton = document.getElementById('floating-button');
+        if (floatingButton) {
+            console.log('Floating button initialized');
+            
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    floatingButton.classList.add('show');
+                } else {
+                    floatingButton.classList.remove('show');
+                }
+            });
+
+            // Add click handler for scroll-to-top
+            floatingButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        } else {
+            console.error('Floating button not found');
+        }
+
         console.log('Page initialized successfully');
     } catch (error) {
         console.error('Error initializing page:', error);
@@ -230,7 +255,7 @@ async function loadWorkExperience() {
                 
                 // Parse markdown and create inner HTML
                 const markdownContent = marked.parse(responsibility);
-                console.log('Parsed markdown:', markdownContent);
+                //console.log('Parsed markdown:', markdownContent);
                 responsibilityItem.innerHTML = markdownContent;
                 
                 responsibilities.appendChild(responsibilityItem);
@@ -250,7 +275,7 @@ async function loadWorkExperience() {
                 
                 // Parse markdown and create inner HTML
                 const markdownContent = marked.parse(tech);
-                console.log('Parsed markdown:', markdownContent);
+                //console.log('Parsed markdown:', markdownContent);
                 techItem.innerHTML = markdownContent;
                 
                 techStackItems.appendChild(techItem);
@@ -272,7 +297,7 @@ async function loadWorkExperience() {
                 
                 // Parse markdown and create inner HTML
                 const markdownContent = marked.parse(success);
-                console.log('Parsed markdown:', markdownContent);
+                //console.log('Parsed markdown:', markdownContent);
                 successItem.innerHTML = markdownContent;
                 
                 successesItems.appendChild(successItem);
@@ -372,17 +397,14 @@ async function loadProjects() {
 
             // Parse markdown and create inner HTML for project description
             const markdownContent = marked.parse(item.description);
-            console.log('Parsed markdown:', markdownContent);
+            //console.log('Parsed markdown:', markdownContent);
             projectDescription.innerHTML = markdownContent;
-            
+
             projectItem.appendChild(h3);
             projectItem.appendChild(techStack);
             projectItem.appendChild(projectDescription);
-            
             projectsContainer.appendChild(projectItem);
-        })
-        
-        
+        });
     } catch (error) {
         console.error('Error loading projects:', error);
         // Add a fallback message to the page
@@ -415,35 +437,6 @@ function setupSkillsToggle() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const style = document.createElement('style');
-    style.textContent = `
-        .obfuscated-email {
-            position: relative;
-            cursor: pointer;
-        }
-        
-        .obfuscated-email::after {
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 5px 10px;
-            background-color: #3498db;
-            color: white;
-            border-radius: 4px;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-        }
-        
-        .obfuscated-email:hover::after {
-            opacity: 1;
-            visibility: visible;
-        }
-    `;
-    document.head.appendChild(style);
-    
     // Initialize email obfuscation
     obfuscateEmail();
     // Calculate and display years of experience
@@ -465,6 +458,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 skillsContainer.classList.add('expanded');
                 skillsExpandButton.classList.add('expanded');
                 skillsExpandButton.textContent = 'Show less';
+            }
+        });
+    }
+
+    // Initialize floating button
+    const floatingButton = document.getElementById('floating-button');
+    if (floatingButton) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                floatingButton.classList.add('show');
+            } else {
+                floatingButton.classList.remove('show');
             }
         });
     }
