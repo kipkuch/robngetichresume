@@ -56,7 +56,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1595px) {
     .floating-menu {
         width: 100%;
         height: 56px;
@@ -464,7 +464,7 @@ h2::after {
 
 .timeline-item {
     position: relative;
-    width: 75%;
+    width: 100%;
     display: flex;
     align-items: center;
     margin-left: 10%;
@@ -743,7 +743,7 @@ h2::after {
 }
 
 /* Responsive timeline */
-@media (max-width: 768px) {
+@media (max-width: 1595px) {
     .timeline-container::before,
     .timeline-year span,
     .timeline-marker {
@@ -1011,7 +1011,7 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1595px) {
     .container {
         padding: 1rem;
     }

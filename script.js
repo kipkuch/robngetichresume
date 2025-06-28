@@ -184,7 +184,7 @@ function initializePage() {
                             behavior: 'smooth'
                         });
                         // Close mobile menu after clicking a link
-                        if (window.innerWidth <= 768) {
+                        if (window.innerWidth <= 1595) {
                             floatingMenu.classList.remove('expanded');
                         }
                     }
@@ -200,7 +200,7 @@ function initializePage() {
 
                 // Close menu when clicking outside on mobile
                 document.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 768 && 
+                    if (window.innerWidth <= 1595 && 
                         !floatingMenu.contains(e.target) && 
                         floatingMenu.classList.contains('expanded')) {
                         floatingMenu.classList.remove('expanded');
