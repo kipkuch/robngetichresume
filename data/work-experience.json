@@ -63,7 +63,7 @@
         "jobTitle": "Technical Lead",
         "organization": "Bluebean Software",
         "duration": "2022 - 2023",
-        "summary": "I joined a diverse team of software developers, analysts and domain experts collaborating across the UAE, Italy and South Africa to develop a central banking platform. This was a project demanding high availability and performance. My tasks on this project entailed: ",
+        "summary": "I joined a diverse team of software developers, analysts and domain experts collaborating across the UAE, Italy and South Africa to develop a central banking platform for the UAE. This was a project demanding high availability and performance. My tasks on this project entailed: ",
         "responsibilities": [
             "Design & refine feature requirements with stakeholders",
             "Identify & backlog technical debt on legacy system",
@@ -113,7 +113,7 @@
         "jobTitle": "Senior Java Developer",
         "organization": "First National Bank, South Africa",
         "duration": "2020",
-        "summary": "I joined the Online banking team for a one year contract in 2020. Due to the global pandemic, there was a lot of effort made in shifting physical customer interactions to online channels. As a maintenance and enhancement engineer, my roles were:",
+        "summary": "First National Bank is the largest bank in South Africa by market cap.I joined the Online banking team for a one year contract in 2020. Due to the global pandemic, there was a lot of effort made in shifting physical customer interactions to online channels. As a maintenance and enhancement engineer, my roles were:",
         "responsibilities": [
              "Backlog grooming with the dev team",
              "Implement software to client specifications",
@@ -138,8 +138,8 @@
         "duration": "2015 - 2019",
         "summary": "At EY, I worked in several roles across various client engagements. Below are listed the most memorable:",
         "responsibilities": [
-            "**Discovery Bank**: I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems. This was done for a new Digital first banking platform for Discovery",
-            "**Standard Bank South Africa**: I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers",
+            "**Discovery Bank**: Discovery bank is the largest private medical insurer in South Africa. In 2018, they began a project to launch an all digital bank for their clients. I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems.",
+            "**Standard Bank South Africa**: Standard Bank is South Africa's largest bank by total assets. I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers",
             "**Mercantile Bank**: I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt."
         ],
         "techStack": [
@@ -280,7 +280,7 @@
         "jobTitle": "IT Technician",
         "organization": "Ziton",
         "duration": "2004",
-        "summary": "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT depertment as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system.",
+        "summary": "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT department as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system.",
         "responsibilities": [],
         "techStack": [],
         "successes": [

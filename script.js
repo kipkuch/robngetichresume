@@ -215,6 +215,7 @@ async function loadWorkExperience() {
             duration.textContent = item.duration;
             
             const summary = document.createElement('p');
+            summary.className = 'work-experience-summary';
             summary.textContent = item.summary;
             
             const responsibilities = document.createElement('div');
@@ -339,9 +340,9 @@ async function loadProjects() {
         const projects = await response.json();
         console.log('Projects data loaded:', projects);
         
-        const projectsGrid = document.getElementById('projects-grid');
-        if (!projectsGrid) {
-            throw new Error('Projects grid not found');
+        const projectsContainer = document.getElementById('projects-container');
+        if (!projectsContainer) {
+            throw new Error('Projects container not found');
         }
 
         projects.forEach((item) => {
@@ -378,7 +379,7 @@ async function loadProjects() {
             projectItem.appendChild(techStack);
             projectItem.appendChild(projectDescription);
             
-            projectsGrid.appendChild(projectItem);
+            projectsContainer.appendChild(projectItem);
         })
         
         

@@ -626,45 +626,68 @@ h2::after {
 }
 
 /* Projects section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.projects-container {
+    margin-top: 2rem;
 }
 
 .project-item {
-    padding: 1.5rem;
-    background-color: #f8f9fa;
+    background: var(--card-bg);
+    padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
-.tech-stack {
-    position: relative;
-    padding-bottom: 1em
+.project-item:hover {
+    background: rgba(52, 152, 219, 0.03);
+}
+
+.project-item h3 {
+    margin: 0 0 1.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.project-item .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-item .tech-stack span,
+.tech-stack-items .tech-item {
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-item .tech-stack span:hover,
+.tech-stack-items .tech-item:hover {
+    background: rgba(52, 152, 219, 0.05);
+    transform: translateY(-1px);
+    border-color: rgba(52, 152, 219, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-item .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .tech-stack-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.tech-item {
-    background: #f8f9fa;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    color: #333;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(52, 152, 219, 0.1);
-}
-
-.tech-item:hover {
-    background: rgba(52, 152, 219, 0.05);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-color: rgba(52, 152, 219, 0.2);
+    gap: 0.75rem;
 }
 
 .tech-item strong {
@@ -692,10 +715,6 @@ h2::after {
 .successes {
     position: relative;
     padding-left: 1em;
-}
-
-.successes-items {
-    margin-top: 1rem;
 }
 
 .success-item {
@@ -745,6 +764,10 @@ footer {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience-summary {
+    padding-top: 0.5em;
 }
 
 .social-links {
