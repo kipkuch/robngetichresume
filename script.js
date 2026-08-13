@@ -243,6 +243,95 @@ function initializePage() {
 // Run initialization immediately
 initializePage();
 
+function createTechStackElement(stackItems, extraClass = '') {
+    if (!Array.isArray(stackItems) || stackItems.length === 0) {
+        return null;
+    }
+
+    const techStack = document.createElement('div');
+    techStack.className = 'tech-stack';
+
+    if (extraClass) {
+        techStack.classList.add(extraClass);
+    }
+
+    const techStackItems = document.createElement('div');
+    techStackItems.className = 'tech-stack-items';
+
+    stackItems.forEach(tech => {
+        const techItem = document.createElement('div');
+        techItem.className = 'tech-item';
+        techItem.innerHTML = marked.parse(tech);
+        techStackItems.appendChild(techItem);
+    });
+
+    techStack.appendChild(techStackItems);
+    return techStack;
+}
+
+function createEngagementsSection(engagements) {
+    if (!Array.isArray(engagements) || engagements.length === 0) {
+        return null;
+    }
+
+    const engagementsSection = document.createElement('div');
+    engagementsSection.className = 'engagements';
+
+    const title = document.createElement('h4');
+    title.className = 'engagements-title';
+    title.textContent = 'Client Engagements';
+    engagementsSection.appendChild(title);
+
+    engagements.forEach(engagement => {
+        const engagementCard = document.createElement('div');
+        engagementCard.className = 'engagement-card';
+
+        const badge = document.createElement('span');
+        badge.className = 'engagement-badge';
+        badge.textContent = 'Client Engagement';
+
+        const roleTitle = document.createElement('h5');
+        roleTitle.className = 'engagement-role';
+        roleTitle.textContent = `${engagement.role} - ${engagement.client}`;
+
+        const meta = document.createElement('p');
+        meta.className = 'engagement-meta';
+        meta.textContent = `${engagement.project} | ${engagement.duration}`;
+
+        const summary = document.createElement('p');
+        summary.className = 'engagement-summary';
+        summary.textContent = engagement.summary;
+
+        const engagementSuccesses = document.createElement('div');
+        engagementSuccesses.className = 'engagement-successes';
+
+        if (Array.isArray(engagement.successes)) {
+            engagement.successes.forEach(success => {
+                const successItem = document.createElement('div');
+                successItem.className = 'engagement-success-item';
+                successItem.innerHTML = marked.parse(success);
+                engagementSuccesses.appendChild(successItem);
+            });
+        }
+
+        const engagementTechStack = createTechStackElement(engagement.techStack, 'engagement-tech-stack');
+
+        engagementCard.appendChild(badge);
+        engagementCard.appendChild(roleTitle);
+        engagementCard.appendChild(meta);
+        engagementCard.appendChild(summary);
+
+        if (engagementTechStack) {
+            engagementCard.appendChild(engagementTechStack);
+        }
+
+        engagementCard.appendChild(engagementSuccesses);
+        engagementsSection.appendChild(engagementCard);
+    });
+
+    return engagementsSection;
+}
+
 async function loadWorkExperience() {
     try {
         // Test if the file exists
@@ -294,8 +383,6 @@ async function loadWorkExperience() {
             const responsibilities = document.createElement('div');
             responsibilities.className = 'responsibilities';
 
-            
-            
             // Process each responsibility item
             item.responsibilities.forEach(responsibility => {
                 const responsibilityItem = document.createElement('div');
@@ -309,27 +396,7 @@ async function loadWorkExperience() {
                 responsibilities.appendChild(responsibilityItem);
             });
 
-            // Create tech stack section
-            const techStack = document.createElement('div');
-            techStack.className = 'tech-stack';
-
-            // Add tech stack items
-            const techStackItems = document.createElement('div');
-            techStackItems.className = 'tech-stack-items';
-
-            item.techStack.forEach(tech => {
-                const techItem = document.createElement('div');
-                techItem.className = 'tech-item';
-                
-                // Parse markdown and create inner HTML
-                const markdownContent = marked.parse(tech);
-                //console.log('Parsed markdown:', markdownContent);
-                techItem.innerHTML = markdownContent;
-                
-                techStackItems.appendChild(techItem);
-            });
-
-            techStack.appendChild(techStackItems);
+            const techStack = createTechStackElement(item.techStack);
 
             // Create successes section
             const successes = document.createElement('div');
@@ -352,21 +419,34 @@ async function loadWorkExperience() {
             });
 
             successes.appendChild(successesItems);
+
+            const engagementsSection = createEngagementsSection(item.engagements);
             
             // Append all elements to the content
             timelineContent.appendChild(h3);
             timelineContent.appendChild(company);
             timelineContent.appendChild(duration);
-            timelineContent.appendChild(techStack);
+
+            if (techStack) {
+                timelineContent.appendChild(techStack);
+            }
+
             timelineContent.appendChild(summary);
             timelineContent.appendChild(responsibilities);
 
-            // Add a subtle separator before successes
-            const separator = document.createElement('div');
-            separator.className = 'section-separator';
-            timelineContent.appendChild(separator);
+            if (item.successes.length > 0 || engagementsSection) {
+                const separator = document.createElement('div');
+                separator.className = 'section-separator';
+                timelineContent.appendChild(separator);
+            }
 
-            timelineContent.appendChild(successes);
+            if (item.successes.length > 0) {
+                timelineContent.appendChild(successes);
+            }
+
+            if (engagementsSection) {
+                timelineContent.appendChild(engagementsSection);
+            }
             
             timelineItem.appendChild(timelineMarker);
             timelineItem.appendChild(timelineContent);

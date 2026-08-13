@@ -3,10 +3,42 @@
         "jobTitle": "Software Engineering Consultant",
         "organization": "Cyber Craft",
         "duration": "2025 - Present",
-        "summary": "I registered a micro enterprise in Paris, France to provide software development services to clients. As an independent consultant, I collaborate with clients to enhance their systems and processes ensuring efficiency and scalability. I tailor solutions to meet the unique needs of a business. Whether refining existing workflows or architecting new software, my approach is rooted in practicality and innovation helping organizations streamline operations and maximize productivity. My goal is to not only solve immediate problems but also build sustainable frameworks that foster long-term growth and adaptability.",
+        "summary": "I registered a micro enterprise in Paris, France as an independent consultant. I focus on three key challenges for organizations: legacy system modernization, integration complexity, and bespoke software design. I tailor solutions to meet the unique needs of a business.",
         "responsibilities": [],
         "techStack": ["Java", "Springboot", "AWS", "JPA", "Apigee", "Angular", "Kafka", "JMS"],
-        "successes": []
+        "successes": [
+            "Delivered modernization engagements as an independent consultant across fintech and travel platforms.",
+            "Led discovery and planning for future-state architecture, including migration away from legacy integration and UI stacks."
+        ],
+        "engagements": [
+            {
+                "client": "EFC",
+                "role": "Senior Java Developer",
+                "project": "LORIS (Loan Origination Platform)",
+                "duration": "2025 - Present",
+                "summary": "Joined the LORIS team to deliver modernization to their legacy lending platform.",
+                "techStack": ["Java", "Spring", "TIBCO", "Windows", "Veracode", "Crystal Reports"],
+                "successes": [
+                    "Upgraded platform dependencies to supported versions across Windows OS, TIBCO workflow/integration, Java, and Spring.",
+                    "Raised Veracode security score from 22 to 100 by remediating vulnerabilities and aligning implementation with security standards.",
+                    "Updated Crystal Reports and preserved end-to-end integration with third-party services for credit checks, property valuations, and loan maintenance.",
+                    "Defined phase two scope: migrate to Spring Boot, replace TIBCO workflows/integrations, and modernize the UI with React or Angular."
+                ]
+            },
+            {
+                "client": "Abeona",
+                "role": "Software Engineer",
+                "project": "Travel Platform Modernization",
+                "duration": "2025 - Present",
+                "summary": "Modernized an ageing brochure-only website into a full platform with catalog management, booking workflows, and integrated payments.",
+                "techStack": ["Catalog Engine", "Booking Workflow", "Integrated Payments"],
+                "successes": [
+                    "Enabled back-office users to maintain packages and suppliers with show/hide catalog controls for seasonal or operational availability.",
+                    "Implemented a structured workflow for multi-leg trips spanning accommodation, point-to-point travel, and multi-day activities.",
+                    "Improved customer operations with quote generation, prospect tracking, and visibility into non-performing packages."
+                ]
+            }
+        ]
     },
     {
         "jobTitle": "Technical Lead - Mainframe",
