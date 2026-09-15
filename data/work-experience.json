@@ -12,24 +12,24 @@
         ],
         "engagements": [
             {
-                "client": "EFC",
+                "client": "Eskom Finance Company (EFC)",
                 "role": "Senior Java Developer",
                 "project": "LORIS (Loan Origination Platform)",
-                "duration": "2025 - Present",
-                "summary": "Joined the LORIS team to deliver modernization to their legacy lending platform.",
+                "duration": "August 2025 - Present",
+                "summary": "Joined the LORIS lending team to deliver modernization to their legacy lending platform.",
                 "techStack": ["Java", "Spring", "TIBCO", "Windows", "Veracode", "Crystal Reports"],
                 "successes": [
-                    "Upgraded platform dependencies to supported versions across Windows OS, TIBCO workflow/integration, Java, and Spring.",
-                    "Raised Veracode security score from 22 to 100 by remediating vulnerabilities and aligning implementation with security standards.",
-                    "Updated Crystal Reports and preserved end-to-end integration with third-party services for credit checks, property valuations, and loan maintenance.",
-                    "Defined phase two scope: migrate to Spring Boot, replace TIBCO workflows/integrations, and modernize the UI with React or Angular."
+                    "Upgraded platform dependencies to supported versions across Windows OS, TIBCO (3rd party vendor) workflow/integration, Java, and Spring (technology framework)",
+                    "Raised Veracode security score from a starting point of 22 to a score of 100 by remediating code vulnerabilities and aligning legacy implementation with modern security standards.",
+                    "Updated Crystal Reports reporting engine and preserved end-to-end integration with existing third-party services for credit checks, property valuations, and loan maintenance.",
+                    "Defined modernization Phase 2 scope: Migration to cloud native microservices, reduced reliance on legacy 3rd Party vendors, and modernize the UI with a later framework e.g. React or Angular."
                 ]
             },
             {
                 "client": "Abeona",
                 "role": "Software Engineer",
                 "project": "Travel Platform Modernization",
-                "duration": "2025 - Present",
+                "duration": "Feb 2026 - Present",
                 "summary": "Modernized an ageing brochure-only website into a full platform with catalog management, booking workflows, and integrated payments.",
                 "techStack": ["Catalog Engine", "Booking Workflow", "Integrated Payments"],
                 "successes": [
