@@ -1,10 +1,7 @@
 {
     "about": {
-        "startYear": 2007,
-        "content": "I have worked as a Software Engineer for over {{yearsOfExperience}} year at various organisations. 
-        I have experience in leading teams, designing and building full stack software 
-        architectures as well as integrations into middleware and backend systems. I have a wealth of experience covering Banking, 
-        Insurance, Automotive and Retail industries."
+        "startYear": 2006,
+        "content": "I have worked as a Software Engineer for over {{yearsOfExperience}} year at various organisations. I have experience in leading teams, designing and building full stack software architectures as well as integrations into middleware and backend systems. I have a wealth of experience covering Banking, Insurance, Automotive and Retail industries."
     },
     "skills": [
         {
