@@ -19,7 +19,7 @@ steps:
         from_secret: ftp_password
       PLUGIN_HOSTNAME:
         from_secret: ftp_host
-      PLUGIN_SRC_DIR: deploy
+      PLUGIN_SRC_DIR: /deploy
       PLUGIN_DEST_DIR: /
       PLUGIN_SECURE: true
       PLUGIN_VERIFY: true
