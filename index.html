@@ -51,7 +51,7 @@
                     <h1>Robert Ngetich</h1>
                     <h2>Software Engineer</h2>
                     <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i>robert.ngetich[at]gmail[dot]com</p>
+                        <p class="email-contact"><i class="fas fa-envelope"></i></p>
                         <p><i class="fas fa-phone"></i> +33 6 88 97 27 14</p>
                         <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
                     </div>
@@ -62,91 +62,20 @@
         <main>
             <section class="about" id="about">
                 <h2>About Me</h2>
-                <p>I have worked as a Software Engineer for <span id="years-of-experience"></span> years. I have
-                    experience in leading teams, designing and building full stack
-                    software architectures as well as integrations into middleware
-                    and backend systems. I have a wealth of experience covering
-                    Banking, Insurance, Automotive and Retail industries.</p>
+                <div id="about-content"></div>
             </section>
 
             <section class="skills" id="skills">
                 <h2>Skills</h2>
                 <div class="skills-container">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Programming Languages</h3>
-                            <ul>
-                                <li>Java</li>
-                                <li>C#</li>
-                                <li>C++</li>
-                                <li>SQL</li>
-                                <li>Linux (Bash)</li>
-                                <li>HTML, CSS, Javascript</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Frameworks</h3>
-                            <ul>
-                                <li>Spring Boot</li>
-                                <li>Angular</li>
-                                <li>Android SDK</li>
-                                <li>Hibernate / JPA</li>
-                                <li>JSF</li>
-                                <li>Swagger</li>
-                                <li>REST APIs</li>
-                                <li>JEE (WebSphere, Payara)</li>
-                                <li>JMS, MQ</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Tools & Technologies</h3>
-                            <ul>
-                                <li>Git</li>
-                                <li>Docker</li>
-                                <li>CI/CD (Jenkins, Docker)</li>
-                                <li>Apigee</li>
-                                <li>Postman</li>
-                                <li>Kafka, AWS Kinesis</li>
-                                <li>Various RDBMS (Oracle, SQL Server, MySQL, PostgreSQL)</li>
-                                <li>AWS</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="skills-grid" id="skills-grid"></div>
                 </div>
                 <button class="skills-expand-button" data-expanded="false">Show more</button>
             </section>
 
             <section class="languages" id="languages">
                 <h2>Spoken Languages</h2>
-                <div class="languages-grid">
-                    <div class="language-item">
-                        <h3>English</h3>
-                        <div class="language-level">
-                            <div class="level-bar">
-                                <div class="progress" style="width: 100%"></div>
-                            </div>
-                            <span class="level-text">Fluent</span>
-                        </div>
-                    </div>
-                    <div class="language-item">
-                        <h3>French</h3>
-                        <div class="language-level">
-                            <div class="level-bar">
-                                <div class="progress" style="width: 40%"></div>
-                            </div>
-                            <span class="level-text">Basic Proficiency (A2)</span>
-                        </div>
-                    </div>
-                    <div class="language-item">
-                        <h3>Swahili</h3>
-                        <div class="language-level">
-                            <div class="level-bar">
-                                <div class="progress" style="width: 100%"></div>
-                            </div>
-                            <span class="level-text">Fluent</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="languages-grid" id="languages-grid"></div>
             </section>
 
             <section class="experience" id="work-experience">
@@ -165,13 +94,7 @@
 
             <section class="education" id="education">
                 <h2>Education</h2>
-                <div class="education-grid">
-                    <div class="education-item">
-                        <h3>Bachelor of Technology in Information Technology</h3>
-                        <p class="institution">Cape Peninsula University of Technology</p>
-                        <p class="duration">2001 - 2006</p>
-                    </div>
-                </div>
+                <div class="education-grid" id="education-grid"></div>
             </section>
 
 

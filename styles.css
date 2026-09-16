@@ -273,6 +273,14 @@ header {
     color: #3498db;
 }
 
+.email-contact {
+    cursor: pointer;
+}
+
+.email-image {
+    display: block;
+}
+
 /* Main content styles */
 main {
     background-color: #f8fafc;

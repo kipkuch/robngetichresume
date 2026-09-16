@@ -28,34 +28,64 @@ document.querySelectorAll('section').forEach(section => {
 // Email obfuscation
 function setupEmailObfuscation() {
     try {
-        const emailElement = document.querySelector('.contact-info p:nth-child(1)');
+        const emailElement = document.querySelector('.email-contact');
         if (emailElement) {
-            const email = 'robert.ngetich@gmail.com';
+            const email = atob('cm9iZXJ0Lm5nZXRpY2hAZ21haWwuY29t');
+            const displayEmail = 'robert.ngetich@gmail.com';
             
-            // Create new elements
             const icon = document.createElement('i');
             icon.className = 'fas fa-envelope';
             
             const emailSpan = document.createElement('span');
             emailSpan.className = 'obfuscated-email';
-            
-            const displaySpan = document.createElement('span');
-            displaySpan.className = 'email-display';
-            displaySpan.textContent = 'robert.ngetich[at]gmail[dot]com';
-            
-            // Create tooltip
+
+            const emailImage = document.createElement('canvas');
+            emailImage.className = 'email-image';
+            emailImage.setAttribute('role', 'img');
+            emailImage.setAttribute('aria-label', 'Email address, click to copy');
+            emailImage.title = 'Click to copy email';
+
+            const context = emailImage.getContext('2d');
+            if (!context) {
+                throw new Error('Canvas rendering context not available');
+            }
+
+            const fontSize = 14;
+            const lineHeight = 24;
+            const font = `${fontSize}px Poppins, sans-serif`;
+
+            const drawEmailImage = () => {
+                context.font = font;
+                const width = Math.ceil(context.measureText(displayEmail).width) + 2;
+                const scale = Math.max(window.devicePixelRatio || 1, 1);
+
+                emailImage.width = width * scale;
+                emailImage.height = lineHeight * scale;
+                emailImage.style.width = `${width}px`;
+                emailImage.style.height = `${lineHeight}px`;
+
+                context.setTransform(scale, 0, 0, scale, 0, 0);
+                context.font = font;
+                context.fillStyle = getComputedStyle(emailElement).color;
+                context.textBaseline = 'middle';
+                context.fillText(displayEmail, 0, lineHeight / 2);
+            };
+
+            drawEmailImage();
+            if (document.fonts?.ready) {
+                document.fonts.ready.then(drawEmailImage);
+            }
+
             const tooltip = document.createElement('span');
             tooltip.className = 'tooltip';
             tooltip.textContent = 'Copy this email';
             
-            // Add tooltip to emailSpan
-            emailSpan.appendChild(displaySpan);
+            emailSpan.appendChild(emailImage);
             emailSpan.appendChild(tooltip);
             emailElement.innerHTML = '';
             emailElement.appendChild(icon);
             emailElement.appendChild(emailSpan);
 
-            // Add hover and click handlers
             emailElement.addEventListener('mouseenter', () => {
                 tooltip.style.opacity = '1';
                 tooltip.style.transform = 'translateY(-10px)';
@@ -67,12 +97,19 @@ function setupEmailObfuscation() {
             });
 
             emailElement.addEventListener('click', () => {
-                navigator.clipboard.writeText(email);
-                tooltip.textContent = 'Email copied!';
-                
-                setTimeout(() => {
-                    tooltip.textContent = 'Copy this email';
-                }, 2000);
+                if (!navigator.clipboard?.writeText) {
+                    tooltip.textContent = 'Copy unavailable';
+                    return;
+                }
+
+                navigator.clipboard.writeText(email).then(() => {
+                    tooltip.textContent = 'Email copied!';
+                    setTimeout(() => {
+                        tooltip.textContent = 'Copy this email';
+                    }, 2000);
+                }).catch(() => {
+                    tooltip.textContent = 'Copy unavailable';
+                });
             });
         } else {
             console.error('Email element not found');
@@ -102,21 +139,16 @@ document.querySelectorAll('.timeline-content').forEach((item) => {
 });
 
 // Add styles for email obfuscation
-function calculateYearsOfExperience() {
+function calculateYearsOfExperience(startYear) {
     try {
-        const startYear = 2006;
-        const currentYear = new Date().getFullYear();
-        const years = currentYear - startYear;
-        
-        const yearsElement = document.getElementById('years-of-experience');
-        if (yearsElement) {
-            yearsElement.textContent = years;
-            console.log(`Years of experience calculated: ${years}`);
-        } else {
-            console.error('Years element not found');
+        const years = new Date().getFullYear() - Number(startYear);
+        if (!Number.isFinite(years)) {
+            throw new Error('Invalid experience start year');
         }
+        return years;
     } catch (error) {
         console.error('Error calculating years of experience:', error);
+        throw error;
     }
 }
 
@@ -136,24 +168,14 @@ function toggleSkills(category) {
 // Main initialization function
 function initializePage() {
     try {
-        // Calculate years of experience
-        const startYear = 2006;
-        const currentYear = new Date().getFullYear();
-        const years = currentYear - startYear;
-        
-        const yearsElement = document.getElementById('years-of-experience');
-        if (yearsElement) {
-            yearsElement.textContent = years;
-            console.log(`Years of experience calculated: ${years}`);
-        } else {
-            console.error('Years element not found');
-        }
-
         // Set up email obfuscation
         setupEmailObfuscation();
 
         // Set up skills toggle
         setupSkillsToggle();
+
+        // Load profile data
+        loadProfile();
 
         // Load work experience
         loadWorkExperience();
@@ -330,6 +352,140 @@ function createEngagementsSection(engagements) {
     });
 
     return engagementsSection;
+}
+
+function renderAbout(about) {
+    const aboutContent = document.getElementById('about-content');
+    if (!aboutContent) {
+        throw new Error('About content container not found');
+    }
+
+    const years = calculateYearsOfExperience(about.startYear);
+    const content = about.content.replace(/\{\{yearsOfExperience\}\}/g, String(years));
+    aboutContent.innerHTML = marked.parse(content);
+}
+
+function renderSkills(skills) {
+    const skillsGrid = document.getElementById('skills-grid');
+    if (!skillsGrid) {
+        throw new Error('Skills grid not found');
+    }
+
+    skillsGrid.replaceChildren();
+    skills.forEach(category => {
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'skill-category';
+
+        const heading = document.createElement('h3');
+        heading.textContent = category.name;
+
+        const list = document.createElement('ul');
+        category.items.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            list.appendChild(listItem);
+        });
+
+        categoryElement.appendChild(heading);
+        categoryElement.appendChild(list);
+        skillsGrid.appendChild(categoryElement);
+    });
+}
+
+function renderLanguages(languages) {
+    const languagesGrid = document.getElementById('languages-grid');
+    if (!languagesGrid) {
+        throw new Error('Languages grid not found');
+    }
+
+    languagesGrid.replaceChildren();
+    languages.forEach(language => {
+        const languageItem = document.createElement('div');
+        languageItem.className = 'language-item';
+
+        const heading = document.createElement('h3');
+        heading.textContent = language.name;
+
+        const languageLevel = document.createElement('div');
+        languageLevel.className = 'language-level';
+
+        const levelBar = document.createElement('div');
+        levelBar.className = 'level-bar';
+
+        const progress = document.createElement('div');
+        progress.className = 'progress';
+        const progressValue = Math.min(100, Math.max(0, Number(language.progress)));
+        progress.style.width = `${progressValue}%`;
+        levelBar.appendChild(progress);
+
+        const levelText = document.createElement('span');
+        levelText.className = 'level-text';
+        levelText.textContent = language.level;
+
+        languageLevel.appendChild(levelBar);
+        languageLevel.appendChild(levelText);
+        languageItem.appendChild(heading);
+        languageItem.appendChild(languageLevel);
+        languagesGrid.appendChild(languageItem);
+    });
+}
+
+function renderEducation(education) {
+    const educationGrid = document.getElementById('education-grid');
+    if (!educationGrid) {
+        throw new Error('Education grid not found');
+    }
+
+    educationGrid.replaceChildren();
+    education.forEach(item => {
+        const educationItem = document.createElement('div');
+        educationItem.className = 'education-item';
+
+        const degree = document.createElement('h3');
+        degree.textContent = item.degree;
+
+        const institution = document.createElement('p');
+        institution.className = 'institution';
+        institution.textContent = item.institution;
+
+        const duration = document.createElement('p');
+        duration.className = 'duration';
+        duration.textContent = item.duration;
+
+        educationItem.appendChild(degree);
+        educationItem.appendChild(institution);
+        educationItem.appendChild(duration);
+        educationGrid.appendChild(educationItem);
+    });
+}
+
+function showProfileError() {
+    const containers = ['about-content', 'skills-grid', 'languages-grid', 'education-grid'];
+    containers.forEach(id => {
+        const container = document.getElementById(id);
+        if (container) {
+            container.textContent = 'Error loading profile data. Please check the console for details.';
+        }
+    });
+}
+
+async function loadProfile() {
+    try {
+        const response = await fetch('data/profile.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const profile = await response.json();
+        renderAbout(profile.about);
+        renderSkills(profile.skills);
+        renderLanguages(profile.languages);
+        renderEducation(profile.education);
+        console.log('Profile data loaded:', profile);
+    } catch (error) {
+        console.error('Error loading profile:', error);
+        showProfileError();
+    }
 }
 
 async function loadWorkExperience() {
@@ -565,11 +721,6 @@ function setupSkillsToggle() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize email obfuscation
-    obfuscateEmail();
-    // Calculate and display years of experience
-    calculateYearsOfExperience();
-    
     // Add click event listener for skills expand button
     const skillsExpandButton = document.querySelector('.skills-expand-button');
     const skillsContainer = document.querySelector('.skills-container');

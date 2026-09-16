@@ -46,7 +46,7 @@
         "duration": "2024",
         "summary": "I lead a team to migrate over 60 legacy mainframe applications into cloud native. Once completed, this will vastly improve the efficiency of the applications and reduce cost overheads in maintaining them. The main aspects of the work involved:",
         "responsibilities": [
-            "Evaluating several transpiling technologies (Heirloom, Blu Age & Astadia) to determine the best fit for organisation",
+            "Evaluating several transpiling technologies (Heirloom, Blu Age & Astadia) to determine the best fit for the organisation",
             "Creating a testable & repeatable migration plan for all subsequent transformation projects. This plan needs to cater for Data as well as code migration taking into account batch processes, mainframe data structures and various character encoding",
             "Training plan for devops engineers to ensure they are able to maintain the applications after migration",
             "Implementing a CI/CD pipeline for the migrated applications",

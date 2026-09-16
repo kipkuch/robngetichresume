@@ -1,0 +1,27 @@
+when:
+  branch: main
+  event: push
+
+steps:
+  - name: prepare-site
+    image: alpine:3.20
+    commands:
+      - mkdir -p deploy
+      - cp index.html script.js styles.css marked.js favicon.svg deploy/
+      - cp -R assets data deploy/
+
+  - name: deploy
+    image: cschlosser/drone-ftps
+    environment:
+      FTP_USERNAME:
+        from_secret: ftp_username
+      FTP_PASSWORD:
+        from_secret: ftp_password
+      PLUGIN_HOSTNAME:
+        from_secret: ftp_host
+      PLUGIN_SRC_DIR: deploy
+      PLUGIN_DEST_DIR: /
+      PLUGIN_SECURE: true
+      PLUGIN_VERIFY: true
+      PLUGIN_CLEAN_DIR: false
+      PLUGIN_CHMOD: false

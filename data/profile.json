@@ -1,0 +1,70 @@
+{
+    "about": {
+        "startYear": 2006,
+        "content": "I have worked as a Software Engineer for {{yearsOfExperience}} years. I have experience in leading teams, designing and building full stack software architectures as well as integrations into middleware and backend systems. I have a wealth of experience covering Banking, Insurance, Automotive and Retail industries."
+    },
+    "skills": [
+        {
+            "name": "Programming Languages",
+            "items": [
+                "Java",
+                "C#",
+                "C++",
+                "SQL",
+                "Linux (Bash)",
+                "HTML, CSS, Javascript"
+            ]
+        },
+        {
+            "name": "Frameworks",
+            "items": [
+                "Spring Boot",
+                "Angular",
+                "Android SDK",
+                "Hibernate / JPA",
+                "JSF",
+                "Swagger",
+                "REST APIs",
+                "JEE (WebSphere, Payara)",
+                "JMS, MQ"
+            ]
+        },
+        {
+            "name": "Tools & Technologies",
+            "items": [
+                "Git",
+                "Docker",
+                "CI/CD (Jenkins, Docker)",
+                "Apigee",
+                "Postman",
+                "Kafka, AWS Kinesis",
+                "Various RDBMS (Oracle, SQL Server, MySQL, PostgreSQL)",
+                "AWS"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "progress": 100,
+            "level": "Fluent"
+        },
+        {
+            "name": "French",
+            "progress": 40,
+            "level": "Basic Proficiency (A2)"
+        },
+        {
+            "name": "Swahili",
+            "progress": 100,
+            "level": "Fluent"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Technology in Information Technology",
+            "institution": "Cape Peninsula University of Technology",
+            "duration": "2001 - 2006"
+        }
+    ]
+}
