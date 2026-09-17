@@ -2,7 +2,8 @@
     {
         "jobTitle": "Software Engineering Consultant",
         "organization": "Cyber Craft",
-        "duration": "2025 - Present",
+        "startDate": "2025",
+        "endDate": "Present",
         "summary": "I registered a micro enterprise in Paris, France as an independent consultant. I focus on three key challenges for organizations: legacy system modernization, integration complexity, and bespoke software design. I tailor solutions to meet the unique needs of a business.",
         "responsibilities": [],
         "techStack": ["Java", "Springboot", "AWS", "JPA", "Apigee", "Angular", "Kafka", "JMS"],
@@ -15,7 +16,8 @@
                 "client": "Eskom Finance Company (EFC)",
                 "role": "Senior Java Developer",
                 "project": "LORIS (Loan Origination Platform)",
-                "duration": "August 2025 - Present",
+                "startDate": "08/2025",
+                "endDate": "Present",
                 "summary": "Joined the LORIS lending team to deliver modernization to their legacy lending platform.",
                 "techStack": ["Java", "Spring", "TIBCO", "Windows", "Veracode", "Crystal Reports"],
                 "successes": [
@@ -29,7 +31,8 @@
                 "client": "Abeona",
                 "role": "Software Engineer",
                 "project": "Travel Platform Modernization",
-                "duration": "Feb 2026 - Present",
+                "startDate": "02/2026",
+                "endDate": "Present",
                 "summary": "Modernized an ageing brochure-only website into a full platform with catalog management, booking workflows, and integrated payments.",
                 "techStack": ["Catalog Engine", "Booking Workflow", "Integrated Payments"],
                 "successes": [
@@ -43,7 +46,8 @@
     {
         "jobTitle": "Technical Lead - Mainframe",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
-        "duration": "2024",
+        "startDate": "01/2024",
+        "endDate": "12/2024",
         "summary": "I lead a team to migrate over 60 legacy mainframe applications into cloud native. Once completed, this will vastly improve the efficiency of the applications and reduce cost overheads in maintaining them. The main aspects of the work involved:",
         "responsibilities": [
             "Evaluating several transpiling technologies (Heirloom, Blu Age & Astadia) to determine the best fit for the organisation",
@@ -68,7 +72,8 @@
     {
         "jobTitle": "Solutions Architect",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
-        "duration": "2023 - 2024",
+        "startDate": "2023",
+        "endDate": "2024",
         "summary": "Working within the ConRecOrd team in the planning department, I oversaw the ordering platform. The project involved maintenance & enhancements to the platform. This was a JEE application running on several Payara Application Servers. My role was twofold. I was responsible for the ongoing backlog for the legacy system as well as migration to webservices in the BMW cloud. The main aspects of the work involved: ",
         "responsibilities": [
             "Participating in Live releases and maintaining the Bitbucket/Jenkins build pipeline",
@@ -94,7 +99,8 @@
     {
         "jobTitle": "Technical Lead",
         "organization": "Bluebean Software",
-        "duration": "2022 - 2023",
+        "startDate": "2022",
+        "endDate": "2023",
         "summary": "I joined a diverse team of software developers, analysts and domain experts collaborating across the UAE, Italy and South Africa to develop a central banking platform for the UAE. This was a project demanding high availability and performance. My tasks on this project entailed: ",
         "responsibilities": [
             "Design & refine feature requirements with stakeholders",
@@ -120,7 +126,8 @@
     {
         "jobTitle": "Senior Java Developer",
         "organization": "BMW IT Hub South Africa (Independent Consultant)",
-        "duration": "2021 - 2022",
+        "startDate": "2021",
+        "endDate": "2022",
         "summary": "I joined the Proflex team within BMW to assist in building a new volume & capacity planning platform. This is used by the planning department to ensure that plants are producing the correct volumes and mix of vehicles. My duties in this role entailed:",
         "responsibilities": [
             "Software development to specification",
@@ -144,7 +151,8 @@
     {
         "jobTitle": "Senior Java Developer",
         "organization": "First National Bank, South Africa",
-        "duration": "2020",
+        "startDate": "01/2020",
+        "endDate": "12/2020",
         "summary": "First National Bank is the largest bank in South Africa by market cap.I joined the Online banking team for a one year contract in 2020. Due to the global pandemic, there was a lot of effort made in shifting physical customer interactions to online channels. As a maintenance and enhancement engineer, my roles were:",
         "responsibilities": [
              "Backlog grooming with the dev team",
@@ -167,7 +175,8 @@
     {
         "jobTitle": "Integration Specialist, Systems Analyst",
         "organization": "Ernst & Young (EY) IT Advisory",
-        "duration": "2015 - 2019",
+        "startDate": "2015",
+        "endDate": "2019",
         "summary": "At EY, I worked in several roles across various client engagements. Below are listed the most memorable:",
         "responsibilities": [
             "**Discovery Bank**: Discovery bank is the largest private medical insurer in South Africa. In 2018, they began a project to launch an all digital bank for their clients. I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems.",
@@ -193,7 +202,8 @@
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Izazi Software",
-        "duration": "2014 - 2015",
+        "startDate": "2014",
+        "endDate": "2015",
         "summary": "Izazi Software was a software company specialising in financial services software. I worked on their loan origination platform (LORIS) migrating code from JEE into a Spring application. While there, I also worked on feature demos for clients. My responsibilities there included:",
         "responsibilities": [
             "Write and deliver features to specification",
@@ -217,7 +227,8 @@
     {
         "jobTitle": "Senior Java Developer",
         "organization": "Argility Retail Solutions",
-        "duration": "2012 - 2014",
+        "startDate": "2012",
+        "endDate": "2014",
         "summary": "I worked on the Argility point of sale system as well as their order switching and merchandising products. We served over 1800 locations in South Africa, each running a tomcat instance with our java application contained. Periodic data syncing was done via XML files sent over FTP. My tasks there included:",
         "responsibilities": [
             "Maintaining the order switching system and merchandise 'bursting' solution",
@@ -242,7 +253,8 @@
     {
         "jobTitle": "Java Developer",
         "organization": "Momentum",
-        "duration": "2009 - 2012",
+        "startDate": "2009",
+        "endDate": "2012",
         "summary": "Momentum is a financial services company based in South Africa. During my time there, I was mainly involved in their document capture and management platform. This was a system utilised by the claims department. I was also pulled in to assist on their MTax platform from time to time. My day to day tasks involved:",
         "responsibilities": [
             "Software support and maintenance",
@@ -268,7 +280,8 @@
     {
         "jobTitle": "Java Developer",
         "organization": "Alacrity Software",
-        "duration": "2007 - 2009",
+        "startDate": "2007",
+        "endDate": "2009",
         "summary": "I worked on their OneView product for their client, Momentum Employee Benefits. This was a product that supported processing of insurance claims. I worked on the claims processing system as well as document generation. My day to day tasks were:",
         "responsibilities": [
             "Software support and maintenance",
@@ -290,7 +303,8 @@
     {
         "jobTitle": "Junior Java Developer",
         "organization": "Fidentia Financial Services",
-        "duration": "2005 - 2007",
+        "startDate": "2005",
+        "endDate": "2007",
         "summary": "I joined the Fidentia 'Infinity' team to build a customer rewards platform. My main focus was on the front end which was done in Macromedia Flex (Later Adobe Flex). I also implemented, maintained and customised an open source version of Mantis for defect tracking.",
         "responsibilities": [],
         "techStack": [
@@ -311,7 +325,8 @@
     {
         "jobTitle": "IT Technician",
         "organization": "Ziton",
-        "duration": "2004",
+        "startDate": "01/2004",
+        "endDate": "12/2004",
         "summary": "Ziton is a fire alarm systems manufacturer based in Cape Town. I worked in the IT department as a student. I gained a lot of experience working with computer hardware and software. It is here that I assembled my first computer system.",
         "responsibilities": [],
         "techStack": [],

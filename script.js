@@ -291,6 +291,44 @@ function createTechStackElement(stackItems, extraClass = '') {
     return techStack;
 }
 
+const experienceDateFormatter = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC'
+});
+
+function formatExperienceDate(date) {
+    if (!date) {
+        return '';
+    }
+
+    const dateString = String(date);
+    const match = /^(\d{2})\/(\d{4})$/.exec(dateString);
+    if (!match) {
+        return dateString;
+    }
+
+    const month = Number(match[1]);
+    const year = Number(match[2]);
+    const parsedDate = new Date(Date.UTC(year, month - 1, 1));
+    if (Number.isNaN(parsedDate.getTime()) || parsedDate.getUTCMonth() !== month - 1 || parsedDate.getUTCFullYear() !== year) {
+        return dateString;
+    }
+
+    return experienceDateFormatter.format(parsedDate);
+}
+
+function formatExperienceDuration(item) {
+    const startDate = formatExperienceDate(item.startDate);
+    const endDate = formatExperienceDate(item.endDate);
+    return endDate ? `${startDate} - ${endDate}` : startDate;
+}
+
+function getExperienceStartYear(startDate) {
+    const match = String(startDate).match(/(\d{4})$/);
+    return match ? match[1] : String(startDate);
+}
+
 function createEngagementsSection(engagements) {
     if (!Array.isArray(engagements) || engagements.length === 0) {
         return null;
@@ -318,7 +356,7 @@ function createEngagementsSection(engagements) {
 
         const meta = document.createElement('p');
         meta.className = 'engagement-meta';
-        meta.textContent = `${engagement.project} | ${engagement.duration}`;
+        meta.textContent = `${engagement.project} | ${formatExperienceDuration(engagement)}`;
 
         const summary = document.createElement('p');
         summary.className = 'engagement-summary';
@@ -509,7 +547,7 @@ async function loadWorkExperience() {
             timelineYear.className = 'timeline-year';
             
             const yearSpan = document.createElement('span');
-            yearSpan.textContent = item.duration.split(' - ')[0]; // Extract the start year
+            yearSpan.textContent = getExperienceStartYear(item.startDate);
             
             const timelineItem = document.createElement('div');
             timelineItem.className = 'timeline-item';
@@ -530,7 +568,7 @@ async function loadWorkExperience() {
             
             const duration = document.createElement('p');
             duration.className = 'duration';
-            duration.textContent = item.duration;
+            duration.textContent = formatExperienceDuration(item);
             
             const summary = document.createElement('p');
             summary.className = 'work-experience-summary';
