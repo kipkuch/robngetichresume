@@ -31,7 +31,7 @@ function setupEmailObfuscation() {
         const emailElement = document.querySelector('.email-contact');
         if (emailElement) {
             const email = atob('cm9iZXJ0Lm5nZXRpY2hAZ21haWwuY29t');
-            const displayEmail = 'robert.ngetich@gmail.com';
+            const displayEmail = email;
             
             const icon = document.createElement('i');
             icon.className = 'fas fa-envelope';
@@ -168,9 +168,6 @@ function toggleSkills(category) {
 // Main initialization function
 function initializePage() {
     try {
-        // Set up email obfuscation
-        setupEmailObfuscation();
-
         // Set up skills toggle
         setupSkillsToggle();
 
@@ -346,10 +343,6 @@ function createEngagementsSection(engagements) {
         const engagementCard = document.createElement('div');
         engagementCard.className = 'engagement-card';
 
-        const badge = document.createElement('span');
-        badge.className = 'engagement-badge';
-        badge.textContent = 'Client Engagement';
-
         const roleTitle = document.createElement('h5');
         roleTitle.className = 'engagement-role';
         roleTitle.textContent = `${engagement.role} - ${engagement.client}`;
@@ -376,7 +369,6 @@ function createEngagementsSection(engagements) {
 
         const engagementTechStack = createTechStackElement(engagement.techStack, 'engagement-tech-stack');
 
-        engagementCard.appendChild(badge);
         engagementCard.appendChild(roleTitle);
         engagementCard.appendChild(meta);
         engagementCard.appendChild(summary);
@@ -390,6 +382,23 @@ function createEngagementsSection(engagements) {
     });
 
     return engagementsSection;
+}
+
+function renderHeader(header) {
+    const contact = header.contact;
+    const name = document.getElementById('profile-name');
+    const title = document.getElementById('profile-title');
+    const phone = document.getElementById('profile-phone');
+    const location = document.getElementById('profile-location');
+
+    if (!name || !title || !phone || !location) {
+        throw new Error('Profile header container not found');
+    }
+
+    name.textContent = header.name;
+    title.textContent = header.title;
+    phone.textContent = contact.phone;
+    location.textContent = contact.location;
 }
 
 function renderAbout(about) {
@@ -515,6 +524,8 @@ async function loadProfile() {
         }
 
         const profile = await response.json();
+        renderHeader(profile.header);
+        setupEmailObfuscation();
         renderAbout(profile.about);
         renderSkills(profile.skills);
         renderLanguages(profile.languages);

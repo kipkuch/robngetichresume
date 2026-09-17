@@ -7,10 +7,7 @@
         "summary": "I registered a micro enterprise in Paris, France as an independent consultant. I focus on three key challenges for organizations: legacy system modernization, integration complexity, and bespoke software design. I tailor solutions to meet the unique needs of a business.",
         "responsibilities": [],
         "techStack": ["Java", "Springboot", "AWS", "JPA", "Apigee", "Angular", "Kafka", "JMS"],
-        "successes": [
-            "Delivered modernization engagements as an independent consultant across fintech and travel platforms.",
-            "Led discovery and planning for future-state architecture, including migration away from legacy integration and UI stacks."
-        ],
+        "successes": [],
         "engagements": [
             {
                 "client": "Eskom Finance Company (EFC)",
@@ -173,30 +170,48 @@
         ]
     },
     {
-        "jobTitle": "Integration Specialist, Systems Analyst",
+        "jobTitle": "Software Engineer, Integration Specialist, Systems Analyst",
         "organization": "Ernst & Young (EY) IT Advisory",
         "startDate": "2015",
         "endDate": "2019",
         "summary": "At EY, I worked in several roles across various client engagements. Below are listed the most memorable:",
-        "responsibilities": [
-            "**Discovery Bank**: Discovery bank is the largest private medical insurer in South Africa. In 2018, they began a project to launch an all digital bank for their clients. I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems.",
-            "**Standard Bank South Africa**: Standard Bank is South Africa's largest bank by total assets. I was on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealers",
-            "**Mercantile Bank**: I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt."
-        ],
-        "techStack": [
-            "Banking Systems",
-            "Integration Layer",
-            "2FA Implementation",
-            "Wholesale Lending",
-            "Digital Banking"
-        ],
-        "successes": [
-            "Was a key contributor to the launching of South Africa's first all digital banking platform for Discovery bank",
-            "Through the use of mutual TLS & JWT, enhanced security for the Discovery bank's integration layer",
-            "Tailored a wholesale lending solution for Standard bank customers across the african continent",
-            "Greatly minimised sync time between credit card & cheque/savings account systems at Mercantile bank by integrating the two systems",
+        "responsibilities": [],
+        "techStack": [],
+        "successes": [],
+        "engagements": [
+            {
+                "client": "Discovery Bank",
+                "role":"Integration Team Lead",
+                "project":"Discovery Bank v1",
+                "startDate":"01/2017",
+                "endDate":"2019",
+                "summary": "Discovery bank is the largest private medical insurer in South Africa. In 2018, they began a project to launch an all digital bank for their clients. I was a team lead for implementation of an integration layer between the bank front end channels (ATM, Online & Mobile) and the back office systems.",
+                "techStack": ["Apigee","Docker", "Kafka", "Spring Boot", "Java"],
+                "successes": ["Was a key contributor to the launching of South Africa's first all digital banking platform for Discovery bank",
+                    "Through the use of mutual TLS & JWT, enhanced security for the Discovery bank's integration layer"]
+            },
+            {
+                "client": "Standard Bank South Africa",
+                "role":"Junior Architect",
+                "project":"Wholesale Vehicle and Asset Finance",
+                "startDate":"2019",
+                "endDate":"12/2019",
+                "summary": "Standard Bank is South Africa's largest bank by total assets. I was a System's Analyst on the vehicle & asset finance team on a project to implement a wholesale lending solution for car dealerships.",
+                "techStack": ["Visio", "UML", "Enterprise Architect"],
+                "successes": ["Tailored a wholesale lending solution for Standard bank customers across the african continent"]
+            },
+            {
+                "client": "Mercantile Bank",
+                "role":"Integration Specialist",
+                "project":"Credit Card Integration",
+                "startDate":"01/2016",
+                "endDate":"12/2016",
+                "summary": "I joined a project to integrate the bank's credit card system to their cheque and savings account platform. As an enhancement, we also integrated a new 2FA process courtesy of Entersekt.",
+                "techStack": ["Tibco: EMS (messaging)", "Tibco BusinessWorks (BPM)", "Entersekt (2FA)"],
+                "successes": ["Greatly minimised sync time between credit card & cheque/savings account systems at Mercantile bank by integrating the two systems",
             "Implemented 2FA at Mercantile bank using Entersekt thereby enhancing security for customers",
-            "Configured high availability via hot failover for mercantile bank systems on Tibco BusinessWorks"
+            "Configured high availability via hot failover for mercantile bank systems on Tibco BusinessWorks"]
+            }
         ]
     },
     {

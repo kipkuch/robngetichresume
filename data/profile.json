@@ -1,4 +1,13 @@
 {
+    "header": {
+        "name": "Robert Ngetich",
+        "title": "Software Engineer",
+        "contact": {
+            "emailDisplay": "robert.ngetich[at]gmail[dot]com",
+            "phone": "+33 6 88 97 27 14",
+            "location": "Paris, France"
+        }
+    },
     "about": {
         "startYear": 2006,
         "content": "I have worked as a Software Engineer for over {{yearsOfExperience}} years at various organisations. I have experience in leading teams, designing and building full stack software architectures as well as integrations into middleware and backend systems. I have a wealth of experience covering Banking, Insurance, Automotive and Retail industries."

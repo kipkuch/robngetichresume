@@ -926,8 +926,6 @@ h2::after {
 .engagement-card {
     position: relative;
     background: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-left: 2px solid rgba(52, 152, 219, 0.45);
     border-radius: 10px;
     padding: 1rem 1rem 0.85rem;
     margin-bottom: 1rem;
@@ -938,24 +936,6 @@ h2::after {
 .engagement-card:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-}
-
-.engagement-badge {
-    position: static;
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.68rem;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #4b5563;
-    background: rgba(148, 163, 184, 0.12);
-    border: 1px solid rgba(100, 116, 139, 0.2);
-    border-radius: 999px;
-    padding: 0.22rem 0.52rem;
-    width: auto;
-    margin-bottom: 0.65rem;
 }
 
 .engagement-role {
